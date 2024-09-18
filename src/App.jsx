@@ -16,7 +16,7 @@ import TrustedCompanies from "./components/TrustedCompanies";
 function App() {
   return (
     <>
-      <nav className="flex items-center justify-between bg-gray-900 text-white px-4 py-3">
+      <nav className="flex items-center justify-between bg-black text-white my-3 mx-3 rounded-[4rem] px-6 py-2">
         <div className="flex items-center gap-12">
           <div className="flex items-center gap-4 font-medium text-xl">
             <img
@@ -26,20 +26,20 @@ function App() {
             />
             <span>Digitals</span>
           </div>
-          <ul className="flex items-center gap-6">
-            <li>Home</li>
-            <li>Products</li>
-            <li>About</li>
-            <li>Contact us</li>
-          </ul>
         </div>
+        <ul className="flex items-center gap-12">
+          <li>Home</li>
+          <li>Products</li>
+          <li>About</li>
+          <li>Contact us</li>
+        </ul>
         <div className="flex items-center">
           <input
             placeholder="find available products"
             type="text"
-            className="rounded-l-[4px] outline-none text-black px-2 py-[6px]"
+            className="rounded-l-[16px] outline-none text-black px-4 py-[6px]"
           />
-          <button className="bg-yellow-500 rounded-r-[4px] text-black py-[6px] px-3">
+          <button className="bg-[#adeb05] rounded-r-[16px] text-black py-[6px] px-3">
             <IoSearch size={"24px"} />
           </button>
         </div>
@@ -52,7 +52,7 @@ function App() {
           </span>
           <div className="flex items-center gap-8 ml-8">
             <span className="flex items-center gap-1">
-              <IoMdCall /> contact us :{" "}
+              <IoMdCall /> 8797594743
             </span>
             <div className="flex gap-6">
               <span className="flex gap-2 items-center">
@@ -69,20 +69,24 @@ function App() {
         </div>
       </marquee>
 
-      <section className="bg-black flex justify-between">
-        <div className="flex flex-col gap-4 items-start justify-center w-[70%] mx-auto">
-          <h1 className="text-blue-400 text-4xl">
-            Where Innovation Meets Comfort – Discover KJ Digitals!!
-          </h1>
-          <p className="text-white max-w-[100%]">
-            Step into the future with KJ Digitals! Our range of home appliances
-            offers unmatched efficiency and style to elevate your living space.
-            From smart refrigerators to energy-saving washing machines, we have
-            everything you need to make your home more comfortable and
-            connected.
-          </p>
-        </div>
-        <Carousel2 visibleItemsCount={1} withIndicator isInfinite>
+      <section className="bg-[#FFDC90]">
+      <div className="flex flex-col bg-black py-8 justify-between items-center gap-6">
+            <h1 className="text-blue-400 text-4xl">
+              Where Innovation Meets Comfort –{" "}
+              <span className="py-1 px-3 text-black bg-[#fc911e] text-3xl rounded-lg">
+                Discover KJ Digitals!
+              </span>
+            </h1>
+            <p className="text-white max-w-[60%] text-center">
+              Step into the future with KJ Digitals! Our range of home
+              appliances offers unmatched efficiency and style to elevate your
+              living space. From smart refrigerators to energy-saving washing
+              machines, we have everything you need to make your home more
+              comfortable and connected.
+            </p>
+          </div>
+        {/* </div> */}
+        {/* <Carousel2 visibleItemsCount={1} withIndicator isInfinite>
           {images.map((image, index) => {
             return (
               <img
@@ -94,7 +98,23 @@ function App() {
               />
             );
           })}
-        </Carousel2>
+        </Carousel2> */}
+        <div className="bg-white flex items-center justify-center w-full">
+          <img
+            src="https://i.pinimg.com/originals/e2/68/7e/e2687eb8d2912f194a5840bbd472236f.jpg"
+            alt=""
+            className="w-1/2"
+          />
+          
+        </div>
+      </section>
+      <section className="pb-4 px-3 flex flex-col gap-3 my-3">
+        <h1 className="text-2xl font-medium">
+          Explore Our Trusted Brands and Find Your Perfect Match!
+        </h1>
+        <section>
+          <TrustedCompanies />
+        </section>
       </section>
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Products!</h1>
@@ -125,14 +145,7 @@ function App() {
           />
         </div>
       </section>
-      <section className="pb-4 px-3 flex flex-col gap-3 my-3">
-        <h1 className="text-2xl font-medium">
-          Explore Our Trusted Brands and Find Your Perfect Match!
-        </h1>
-        <section>
-          <TrustedCompanies />
-        </section>
-      </section>
+      
       <section className="pb-4 px-3 flex flex-col gap-3 my-3">
         <h1 className="text-2xl font-medium">
           Your Trust, Our Pride: See What Our Customers Are Saying
@@ -249,16 +262,17 @@ function App() {
         <div className="my-4">
           <h1 className="text-white">You can also contact us here!</h1>
           <div className="text-white flex items-center gap-6 mt-3">
-            <IoMdCall size={'26px'} />
-            <FaFacebook size={'26px'} />
-            <FaInstagram size={'26px'} />
-            <BiLogoGmail size={'26px'} />
+            <IoMdCall size={"26px"} />
+            <FaFacebook size={"26px"} />
+            <FaInstagram size={"26px"} />
+            <BiLogoGmail size={"26px"} />
           </div>
         </div>
       </footer>
-        <div className="bg-gray-950 py-3 w-full text-white flex items-center justify-center">
-          &copy; 2024 KJ Digitals: simri bakhtiyarpur, saharsa, 852127, bihar, india. All rights reserved!
-        </div>
+      <div className="bg-gray-950 py-3 w-full text-white flex items-center justify-center">
+        &copy; 2024 KJ Digitals: simri bakhtiyarpur, saharsa, 852127, bihar,
+        india. All rights reserved!
+      </div>
     </>
   );
 }
