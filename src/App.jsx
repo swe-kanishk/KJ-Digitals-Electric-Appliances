@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import Carousel2 from "./components/Carousel2";
-import images from '../public/images';
+import images from './components/images';
 import { IoMdCall } from "react-icons/io";
 import CompanyCard from './components/CompanyCard';
 
