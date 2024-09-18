@@ -1,0 +1,43 @@
+.testimonial-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.testimonial-cards{
+    width: 420px;
+    height: 210px;
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 16px 1px rgb(151, 150, 150);
+    transition: all 0.5s;
+}
+.testimonial-cards:hover {
+    transform: scale(1.05);
+    border: 1px solid var(--link-color);
+}
+.user-review, .user-profession {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+.username {
+    color: var(--link-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.user-profession {
+    text-transform: capitalize;
+}
+.user-img img {
+    height: 5rem;
+}
