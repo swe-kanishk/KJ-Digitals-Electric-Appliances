@@ -1,0 +1,36 @@
+/* trustedCompanies.css */
+.animated-scroll-lines {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    white-space: nowrap;
+    animation: scroll-left 3s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(-20%);
+    }
+    50% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(-20%);
+    }
+  }
+  
+  /* Add a class for visibility */
+  .animated-scroll-lines.visible {
+    opacity: 1;
+  }
+  
