@@ -1,12 +1,12 @@
 import React from 'react'
 import logoimage from "../../public/kj logo.jpeg";
 import { IoSearch } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav className="flex items-center justify-between bg-black text-white my-3 mx-3 rounded-[4rem] px-6 py-2">
-        <div className="flex items-center gap-12">
+        <Link to="/" className="flex items-center gap-12">
           <div className="flex items-center gap-4 font-medium text-xl">
             <img
               src={logoimage}
@@ -15,7 +15,7 @@ function Navbar() {
             />
             <span>Digitals</span>
           </div>
-        </div>
+        </Link>
         <ul className="flex items-center gap-12">
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/products'>Products</NavLink>
