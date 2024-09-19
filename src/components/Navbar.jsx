@@ -7,13 +7,13 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between bg-black text-white my-3 mx-3 rounded-[4rem] px-6 py-2">
         <Link to="/" className="flex items-center gap-12">
-          <div className="flex items-center gap-4 font-medium text-xl">
+          <div className="flex items-center gap-2 font-medium text-xl">
             <img
               src={logoimage}
               alt=""
-              className="h-12 w-12 rounded-full object-cover object-center"
+              className="h-12 w-12  rounded-full object-cover object-center"
             />
-            <span>Digitals</span>
+            <span className='text-2xl'>Digitals</span>
           </div>
         </Link>
         <ul className="flex items-center gap-12">

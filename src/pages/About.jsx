@@ -26,7 +26,7 @@ function About() {
             <img className="mx-auto h-[200px]" src="https://i.pinimg.com/564x/61/1d/4d/611d4dc95d8dcb8ef811cedda10fe33b.jpg" alt="" />
             </div>
 
-            <ul className='grid grid-cols-3 bg-black place-content-center py-3 place-items-center'>
+            <ul className='grid grid-cols-3 bg-black place-content-center py-12 place-items-center'>
                 <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
                 <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/46/7c/fb/467cfb0511b1e9f1bc1208956b01e5a7.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
                 <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/aa/10/f8/aa10f8828e606a1d7525fa4a59dc93dd.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
