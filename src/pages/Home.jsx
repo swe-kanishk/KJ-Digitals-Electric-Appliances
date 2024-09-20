@@ -10,7 +10,7 @@ import Reviews from "../components/Reviews";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from "react";
-import bee from '../../public/pngwing.com.png'
+import kitchen from '../../public/pngwing.com (1).png'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,24 +26,6 @@ function Home() {
     });
   };
 
-  const imageRef = useRef()
-  const randomX = gsap.utils.random(-500, 100, 500)
-  const randomY = gsap.utils.random(-360, 30, 300)
-  const rotateX = gsap.utils.random(-500, 100, 500)
-
-  const [xValue, setXValue] = useState(0)
-  const [yValue, setYValue] = useState(0)
-  const [rotateValue, setrotateValue] = useState(0)
-  console.log(xValue, yValue, rotateValue)
-  useGSAP(() => {
-    gsap.to(imageRef.current, {
-      x: xValue,
-      y: yValue,
-      duration: 0.6,
-      rotate: rotateValue
-    })
-  }, [xValue, yValue, rotateValue])
-
   useGSAP(() => {
     gsap.to('.circle', {
       x: mousePosition.x,
@@ -52,28 +34,8 @@ function Home() {
     })
   }, [mousePosition])
 
-  // useGSAP(() => {
-  //   gsap.from(".animated-cards", {
-  //     x: 150,
-  //     opacity: 50,
-  //       scrollTrigger: {
-  //           trigger: '.animated-cards',
-  //           scroller: 'body',
-  //           markers: true,
-  //           start: 'top 80%',
-  //           scrub: true
-  //       }
-  //   })
-  // })
   return (
     <>
-    <main className="">
-      <img src={bee} alt="" onClick={() => {
-        setXValue(randomX)
-        setYValue(randomY)
-        setrotateValue(rotateX)
-      }} ref={imageRef} className="h-16 absolute w-16 scale-[105%] top-[50%] left-[50%] rounded-full object-cover" />
-    </main>
       <marquee behavior="scroll" direction="left">
         <div className="flex items-center">
           <span>
@@ -101,7 +63,8 @@ function Home() {
 
       <section onMouseMove={handleMouseMove} className="bg-[#FFDC90] relative">
         <div className="circle rounded-full bg-yellow-500"></div>
-      <div className="flex flex-col bg-black py-8 justify-between items-center gap-6">
+      <div className="flex bg-black py-8 justify-between px-8 items-center gap-6">
+            <div className="flex flex-col justify-between items-center gap-6">
             <h1 className="text-blue-400 text-4xl">
               Where Innovation Meets Comfort –{" "}
               <span className="py-1 px-3 text-black bg-[#fc911e] text-3xl rounded-lg">
@@ -115,29 +78,13 @@ function Home() {
               machines, we have everything you need to make your home more
               comfortable and connected.
             </p>
-          </div>
-        {/* </div> */}
-        {/* <Carousel2 visibleItemsCount={1} withIndicator isInfinite>
-          {images.map((image, index) => {
-            return (
-              <img
-                key={index}
-                src={image.imgURL}
-                className="h-[400px] w-[400px] aspect-square object-cover"
-                loading="lazy"
-                alt={image.imgAlt}
-              />
-            );
-          })}
-        </Carousel2> */}
-        <div className="bg-white flex items-center justify-center w-full">
-          <img
-            src="https://i.pinimg.com/originals/e2/68/7e/e2687eb8d2912f194a5840bbd472236f.jpg"
+            </div>
+            <img
+            src={kitchen}
             alt=""
-            className="w-1/2"
+            className="w-1/2 drop-shadow"
           />
-          
-        </div>
+          </div>
       </section>
       <section className="pb-4 px-3 flex flex-col gap-3 my-3">
         <h1 className="text-2xl font-medium">

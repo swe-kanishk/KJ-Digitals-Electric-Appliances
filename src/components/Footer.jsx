@@ -18,8 +18,8 @@ function Footer() {
           />
           <span className="text-2xl text-black">Digitals</span>
         </div>
-        <div className="flex justify-between w-full gap-3">
-          <ul className="grid grid-cols-2 gap-3 text-black w-[450px]">
+        <div className="flex md:flex-row flex-col w-full gap-3">
+          <ul className="grid grid-cols-2 gap-3 text-black w-full md:w-[450px]">
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum dolor.</li>
@@ -29,9 +29,9 @@ function Footer() {
             <li>Lorem, ipsum dolor.</li>
             <li>Lorem, ipsum dolor.</li>
           </ul>
-          <div className="flex flex-1 items-center justify-start flex-col text-black">
+          <div className="flex flex-1 items-start md:items-center justify-start flex-col text-black">
             <div className="flex flex-col gap-3">
-              <h1>Enter your gmail and submit, we will be back to you soon!</h1>
+              <h1 className='font-medium mt-3 md:my-0'>Enter your gmail and submit, we will be back to you soon!</h1>
               <div>
                 <input
                   type="text"
@@ -57,7 +57,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-950 py-3 w-full text-white flex items-center justify-center">
+      <div className="bg-gray-950 py-3 w-full text-white text-center flex items-center justify-center">
         &copy; 2024 KJ Digitals: simri bakhtiyarpur, saharsa, 852127, bihar,
         india. All rights reserved!
       </div>

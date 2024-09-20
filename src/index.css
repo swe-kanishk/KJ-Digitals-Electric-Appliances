@@ -89,3 +89,7 @@
     font-weight: 300;
     color: #999999;
 }
+
+.drop-shadow {
+    filter: drop-shadow(3px 3px 10px #c977ff);
+}
