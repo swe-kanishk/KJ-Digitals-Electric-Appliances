@@ -4,6 +4,8 @@ import { useGSAP } from '@gsap/react';
 import { useRef, useState } from "react";
 import bee from '../../public/pngwing.com.png'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,9 +36,9 @@ function Reviews() {
   })
   return (
     <section className="pb-4 px-3 flex flex-col gap-3 my-3">
-        <h1 className="text-2xl font-medium review-text">
+        <Link to="/contact" className="text-2xl font-medium review-text cursor-pointer">
           Your Trust, Our Pride: See What Our Customers Are Saying
-        </h1>
+        </Link>
         <div className="testimonial-container">
           <div className="grid-testimonial-container flex gap-12 px-0">
             <div className="testimonial-cards review-cards">
