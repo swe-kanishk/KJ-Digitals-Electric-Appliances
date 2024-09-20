@@ -40,8 +40,8 @@ function Reviews() {
           Your Trust, Our Pride: See What Our Customers Are Saying
         </Link>
         <div className="testimonial-container">
-          <div className="grid-testimonial-container flex gap-12 px-0">
-            <div className="testimonial-cards review-cards">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 place-items-center">
+            <div className="testimonial-cards w-full review-cards">
               <div className="user-review">
                 <p>
                   KJ Digitals ki service bahut hi acchi hai. Maine recently ek
@@ -63,7 +63,7 @@ function Reviews() {
                 <span>10th grade english teacher</span>
               </div>
             </div>
-            <div className="testimonial-cards flex-1 review-cards">
+            <div className="testimonial-cards w-full flex-1 review-cards">
               <div className="user-review">
                 <p>
                   Mujhe KJ Digitals se washing machine aur speaker kharidne ka
@@ -85,7 +85,7 @@ function Reviews() {
                 <span>parent</span>
               </div>
             </div>
-            <div className="testimonial-cards flex-2 review-cards">
+            <div className="testimonial-cards w-full flex-2 review-cards">
               <div className="user-review">
                 <p>
                   KJ Digitals par available home appliances ki quality behtareen
