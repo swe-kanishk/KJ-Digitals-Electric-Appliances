@@ -1,6 +1,10 @@
 // TrustedCompanies.js
 import React, { useEffect, useRef, useState } from "react";
 import "./trustedCompanies.css"; // Import your CSS file
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger);
 
 const TrustedCompanies = () => {
   const containerRef = useRef(null);
@@ -36,6 +40,16 @@ const TrustedCompanies = () => {
     },
     {
       companyLogo:
+        "https://i.pinimg.com/564x/ef/8a/e5/ef8ae5b2a53c6d3be9e281d99241d635.jpg",
+      companyName: "usha",
+    },
+    {
+      companyLogo:
+        "https://i.pinimg.com/564x/bc/4e/29/bc4e294cb9548aaa8ddc13be507f7f9a.jpg",
+      companyName: "crompton",
+    },
+    {
+      companyLogo:
         "https://i.pinimg.com/564x/14/49/1d/14491d94474b02327509817a06e020d6.jpg",
       companyName: "lg",
     },
@@ -45,10 +59,11 @@ const TrustedCompanies = () => {
       companyName: "whirlpool",
     },
     {
-        companyLogo:
-          "https://i.pinimg.com/564x/d9/b0/b0/d9b0b0cb12a1ace2c59807339cbb0473.jpg",
-        companyName: "panasonic",
-      },
+      companyLogo:
+        "https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg",
+      companyName: "realme",
+    },
+    
     {
       companyLogo:
         "https://i.pinimg.com/736x/bc/8b/db/bc8bdbdb6fc22612b541af3e75d7a5c3.jpg",
@@ -56,20 +71,38 @@ const TrustedCompanies = () => {
     },
     {
       companyLogo:
-        "https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg",
-      companyName: "realme",
+        "https://i.pinimg.com/564x/66/aa/fa/66aafaa25fffe78c6b01dd175a91cee7.jpg",
+      companyName: "milton",
+    },
+    {
+      companyLogo:
+        "https://i.pinimg.com/564x/d9/b0/b0/d9b0b0cb12a1ace2c59807339cbb0473.jpg",
+      companyName: "panasonic",
     },
     
   ];
+
+  useGSAP(() => {
+    gsap.to(".animated-companies", {
+      x: -700,
+      opacity: 50,
+        scrollTrigger: {
+            trigger: '.animated-cards',
+            scroller: 'body',
+            start: 'top 120%',
+            scrub: true
+        }
+    })
+  })
   return (
     <div
       ref={containerRef}
-      className={`animated-scroll-lines ${isVisible ? "visible" : ""} flex justify-between items-center`}
+      className={` w-auto flex gap-8 border-none py-6`}
     >
       {trustedComapies.map((company) => {
         return (
-          <div key={company.companyName} className="scroll-content">
-            <img src={company.companyLogo} className="h-20" alt="" />
+          <div key={company.companyName} className=" animated-companies">
+            <img src={company.companyLogo} className="min-h-[100px] h-[100px] rounded-xl shadow-lg object-cover w-[200px] min-w-[200px]" alt="" />
           </div>
         );
       })}

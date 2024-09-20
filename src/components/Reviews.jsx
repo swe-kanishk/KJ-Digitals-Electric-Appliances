@@ -1,14 +1,45 @@
 import React from 'react'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef, useState } from "react";
+import bee from '../../public/pngwing.com.png'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Reviews() {
+  useGSAP(() => {
+    gsap.from(".review-cards", {
+      y: 250,
+      opacity: 0,
+        scrollTrigger: {
+            trigger: '.review-cards',
+            scroller: 'body',
+            start: 'top 120%',
+            end: 'top 40%',
+            scrub: true
+        }
+    })
+    gsap.to(".review-cards", {
+      y: 0,
+      opacity: 1,
+        scrollTrigger: {
+            trigger: '.review-cards',
+            scroller: 'body',
+            start: 'top 160%',
+            end: 'top 40%',
+            scrub: true
+        }
+    })
+  })
   return (
     <section className="pb-4 px-3 flex flex-col gap-3 my-3">
-        <h1 className="text-2xl font-medium">
+        <h1 className="text-2xl font-medium review-text">
           Your Trust, Our Pride: See What Our Customers Are Saying
         </h1>
         <div className="testimonial-container">
           <div className="grid-testimonial-container flex gap-12 px-0">
-            <div className="testimonial-cards">
+            <div className="testimonial-cards review-cards">
               <div className="user-review">
                 <p>
                   KJ Digitals ki service bahut hi acchi hai. Maine recently ek
@@ -30,7 +61,7 @@ function Reviews() {
                 <span>10th grade english teacher</span>
               </div>
             </div>
-            <div className="testimonial-cards flex-1">
+            <div className="testimonial-cards flex-1 review-cards">
               <div className="user-review">
                 <p>
                   Mujhe KJ Digitals se washing machine aur speaker kharidne ka
@@ -52,7 +83,7 @@ function Reviews() {
                 <span>parent</span>
               </div>
             </div>
-            <div className="testimonial-cards flex-2">
+            <div className="testimonial-cards flex-2 review-cards">
               <div className="user-review">
                 <p>
                   KJ Digitals par available home appliances ki quality behtareen
