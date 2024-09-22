@@ -38,6 +38,8 @@ function Contact() {
           setError(error.message ? error.message : error);
         });
     }
+
+    
   return (
     <div className="flex flex-col">
     <form onSubmit={(e) => onSubmit(e)} className="flex border border-black">

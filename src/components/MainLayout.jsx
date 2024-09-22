@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 function MainLayout() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col w-full overflow-hidden'>
         <Navbar />
       <div>
         <Outlet />

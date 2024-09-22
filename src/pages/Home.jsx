@@ -16,24 +16,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (event) => {
-    console.log(event)
-    setMousePosition({
-      x: event.clientX,
-      y: event.clientY,
-    });
-  };
-
   useGSAP(() => {
-    gsap.to('.circle', {
-      x: mousePosition.x,
-      y: mousePosition.y,
-      duration: 0.6,
+    gsap.to(".animated-heading", {
+        translateX: -100,
+        duration: 2,
+        scrollTrigger: {
+            trigger: '.animated-heading',
+            scroller: 'body',
+            start: 'top 20%',
+            scrub: true
+        }
     })
-  }, [mousePosition])
-
+  })
   return (
     <>
       <marquee behavior="scroll" direction="left">
@@ -61,11 +55,10 @@ function Home() {
         </div>
       </marquee>
 
-      <section onMouseMove={handleMouseMove} className="bg-[#FFDC90] relative">
-        <div className="circle rounded-full bg-yellow-500"></div>
-      <div className="flex bg-black py-8 justify-between px-8 items-center gap-6">
+      <section className="bg-[#FFDC90] relative">
+      <div className="flex flex-col bg-black py-8 justify-between px-8 items-center gap-6">
             <div className="flex flex-col justify-between items-center gap-6">
-            <h1 className="text-blue-400 text-4xl">
+            <h1 className="text-blue-400 text-4xl animated-heading">
               Where Innovation Meets Comfort –{" "}
               <span className="py-1 px-3 text-black bg-[#fc911e] text-3xl rounded-lg">
                 Discover KJ Digitals!
