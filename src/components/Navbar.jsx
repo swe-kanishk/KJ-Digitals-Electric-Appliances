@@ -29,7 +29,7 @@ function Navbar() {
   });
   return (
     <>
-    <nav className="flex items-center justify-between z-20 shadow-md shadow-white fixed top-0 left-0 w-full bg-black text-white px-6 py-2">
+    <nav className="flex items-center justify-between z-20 border-b border-gray-300 fixed top-0 left-0 w-full bg-white px-6 py-2">
       <Link to="/" className="flex items-center gap-12">
         <div className="flex items-center gap-2 font-medium text-xl">
           <img
@@ -40,7 +40,7 @@ function Navbar() {
           <span className="text-2xl">Digitals</span>
         </div>
       </Link>
-      <ul className="lg:flex items-center gap-12 hidden">
+      <ul className="lg:flex items-center font-medium gap-12 hidden">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
@@ -58,9 +58,9 @@ function Navbar() {
         <input
           placeholder="find available products"
           type="text"
-          className="rounded-l-[16px] search-input outline-none text-black px-4 py-[6px]"
+          className="rounded-l-[16px] search-input border border-gray-300 outline-none text-black px-4 py-[6px]"
         />
-        <button className="bg-[#adeb05] rounded-r-[16px] text-black py-[6px] px-3">
+        <button className="bg-[#adeb05] border border-[#7b7b7b] rounded-r-[16px] text-black py-[6px] px-3">
           <IoSearch size={"24px"} />
         </button>
       </div>

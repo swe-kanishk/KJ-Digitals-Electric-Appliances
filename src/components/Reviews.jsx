@@ -30,7 +30,7 @@ function Reviews() {
             scroller: 'body',
             start: 'top 160%',
             end: 'top 40%',
-            scrub: true
+            scrub: true,
         }
     })
   })

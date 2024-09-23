@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .active {
-    background-color: white;
+    background-color: rgb(20, 19, 19);
     padding: 8px 16px;
     border-radius: 18px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 600;
 }
 
@@ -93,3 +93,13 @@
 .drop-shadow {
     filter: drop-shadow(3px 3px 10px #c977ff);
 }
+
+.scroll-container {
+    width: 400%; /* Adjust based on the number of cards */
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .panel {
+    min-width: fit-content; /* Each card takes the full width of the viewport */
+  }

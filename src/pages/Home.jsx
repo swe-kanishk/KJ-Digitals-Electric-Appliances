@@ -1,36 +1,29 @@
 import "../App.css";
 import Card from "../components/Card";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoMdCall } from "react-icons/io";
 import "../../src/components/testimonial.css";
 import TrustedCompanies from "../components/TrustedCompanies";
 import Reviews from "../components/Reviews";
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { useRef, useState } from "react";
-import kitchen from '../../public/pngwing.com (1).png'
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
+import kitchen from "../../public/pngwing.com (1).png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import VideoAdd from "../components/VideoAdd";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import refrigerator from "../../public/Comp 1.mp4";
+import { FaArrowCircleRight } from "react-icons/fa";
+import { TiArrowRight } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
-  useGSAP(() => {
-    gsap.to(".animated-heading", {
-        translateX: -100,
-        duration: 2,
-        scrollTrigger: {
-            trigger: '.animated-heading',
-            scroller: 'body',
-            start: 'top 20%',
-            scrub: true
-        }
-    })
-  })
   return (
     <>
-      <marquee behavior="scroll" direction="left">
+      <marquee behavior="scroll" direction="left" className="my-3">
         <div className="flex items-center">
           <span>
             KJ Digitals : near shiv mandir, main road, simri bakhtiyarpur,
@@ -55,38 +48,56 @@ function Home() {
         </div>
       </marquee>
 
-      <section className="bg-[#FFDC90] relative">
-      <div className="flex flex-col bg-black py-8 justify-between px-8 items-center gap-6">
-            <div className="flex flex-col justify-between items-center gap-6">
-            <h1 className="text-blue-400 text-4xl animated-heading">
-              Where Innovation Meets Comfort –{" "}
-              <span className="py-1 px-3 text-black bg-[#fc911e] text-3xl rounded-lg">
-                Discover KJ Digitals!
-              </span>
-            </h1>
-            <p className="text-white max-w-[60%] text-center">
-              Step into the future with KJ Digitals! Our range of home
-              appliances offers unmatched efficiency and style to elevate your
-              living space. From smart refrigerators to energy-saving washing
-              machines, we have everything you need to make your home more
-              comfortable and connected.
-            </p>
-            </div>
-            <img
-            src={kitchen}
-            alt=""
-            className="w-1/2 drop-shadow"
-          />
+      <section className="relative flex justify-between h-[85vh]">
+        <div className="flex flex-wrap justify-center pt-[6%] items-start pl-6 flex-col gap-4 w-1/2">
+          <h1 className="text-[2rem] font-bold">Smart Living Starts Here<br /> Elevate Your Home with Cutting-Edge Electronics</h1>
+          <p className="text-gray-400 font-medium">Transform your lifestyle with KJ Digitals! Explore the latest in electronic appliances that combine sleek design with unbeatable performance. Upgrade today and live smarter.</p>
+          <div className="my-6">
+            <button className="bg-red-500 text-white py-2 px-3 font-medium rounded-lg flex items-center gap-2">See all available products <FaArrowCircleRight size={'20px'} /></button>
           </div>
+          <div className="flex gap-3 flex-1 items-end justify-between">
+              <img src="https://i.pinimg.com/564x/f0/a3/ef/f0a3efaa6be4fac83e00d06181735e8c.jpg" className="rounded-2xl my-3 w-2/4" alt="" />
+
+            <div className="h-fit self-end my-3 rounded-2xl flex-1 overflow-hidden w-full relative bg-purple-700">
+              <img src="https://i.pinimg.com/564x/bb/46/cc/bb46cce207cc28ca37d6c70854560c25.jpg" alt="" />
+              <ul className="absolute flex flex-col gap-1 top-4 left-4 font-semibold">
+              <span className="text-white pb-3">Why KJ Digitals ?</span>
+                <li className="flex items-center gap-2 text-sm text-black">
+                <TiArrowRight />Top-Quality Appliances from Trusted Brands.
+                </li>
+                <li className="flex items-center gap-2 text-sm text-black">
+                <TiArrowRight />Affordable Prices with Amazing Discounts.
+
+                </li>
+                <li className="flex items-center gap-2 text-sm text-black">
+                <TiArrowRight />Fast, Reliable Shipping Nationwide.
+
+                </li>
+                <li className="flex items-center gap-2 text-sm text-black">
+                <TiArrowRight />Expert Support Available 24/7.
+                </li>
+              </ul>
+              <Link to="/contact" className="absolute bottom-5 right-5 text-white rounded-lg bg-black px-4 py-2 hover:bg-white hover:text-black font-medium">Contact us!</Link>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="relative">
+            <img src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg" className="absolute h-[400px] rounded-xl bottom-0 right-[70%] border-4 border-white" alt="" />
+            <img className="rounded-xl" src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg" alt="" />
+          </div>
+        </div>
       </section>
-      <section className="pb-4 px-3 flex flex-col gap-3 my-3">
-        <h1 className="text-2xl font-medium">
+
+      <section className="bg-[#151515] px-3 py-4 flex flex-col gap-3">
+        <h1 className="text-2xl text-white font-medium">
           Explore Our Trusted Brands and Find Your Perfect Match!
         </h1>
-        <section className="overflow-hidden w-[100vw]">
+        <section className="overflow-hidden bg-[#151515] w-[100vw]">
           <TrustedCompanies />
         </section>
       </section>
+
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Products!</h1>
         <div className="bg-gray-300 flex w-full animated-cards">
@@ -116,11 +127,10 @@ function Home() {
           />
         </div>
       </section>
-      
+
       <Reviews />
-      
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
