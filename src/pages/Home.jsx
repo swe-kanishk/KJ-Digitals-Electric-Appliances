@@ -62,9 +62,9 @@ function Home() {
             </p>
             <Link
               to="/products"
-              className="bg-red-500 mx-auto lg:mx-0 xl:self-start w-fit hover:bg-red-600 text-white py-2 px-3 font-medium rounded-lg flex items-center gap-2"
+              className="bg-red-500 mx-auto lg:mx-0 xl:self-start w-fit hover:bg-red-600 text-white py-2 px-4 font-medium rounded-lg flex items-center gap-2"
             >
-              See all available products <FaArrowCircleRight size={"20px"} />
+              See all available products <FaArrowCircleRight className="animate-arrow" size={"20px"} />
             </Link>
           </div>
           <div className="flex lg:gap-3 items-end w-full xl:flex-1 h-full lg:pr-6 justify-between">
@@ -135,7 +135,7 @@ function Home() {
       </section>
 
       <section className="lg:bg-[#151515] lg:py-4 flex flex-col gap-3">
-        <h1 className="text-2xl hidden sm:flex lg:text-white font-medium">
+        <h1 className="text-2xl px-3 hidden sm:flex lg:text-white font-medium">
           Explore Our Trusted Brands and Find Your Perfect Match!
         </h1>
         <h1 className="text-2xl px-2 sm:hidden lg:text-white font-medium">

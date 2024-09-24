@@ -43,7 +43,7 @@ function Contact() {
   return (
     <div className="flex flex-col">
     <form onSubmit={(e) => onSubmit(e)} className="flex border border-black">
-      <div className="flex h-[500px] flex-1">
+      <div className="flex h-fit md:h-[500px] pt-8 flex-1">
         <div className="w-full flex-1 mx-auto px-6 py-3  flex flex-col justify-center">
           <h1 className="text-3xl font-medium">Contact us</h1>
           <p className="text-gray-500">
