@@ -10,22 +10,22 @@ const TrustedCompanies = () => {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setIsVisible(entry.isIntersecting);
+  //     },
+  //     { threshold: 0.1 }
+  //   );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+  //   if (containerRef.current) {
+  //     observer.observe(containerRef.current);
+  //   }
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, []);
 
   const trustedComapies = [
     {
@@ -81,32 +81,34 @@ const TrustedCompanies = () => {
     },
     
   ];
-
-  useGSAP(() => {
-    gsap.to(".animated-companies", {
-      x: -700,
-      opacity: 50,
-        scrollTrigger: {
-            trigger: '.animated-cards',
-            scroller: 'body',
-            start: 'top 120%',
-            scrub: true
-        }
-    })
-  })
+  // useGSAP(() => {
+  //   gsap.to(".animated-companies", {
+  //     x: -700,
+  //     opacity: 50,
+  //       scrollTrigger: {
+  //           trigger: '.animated-cards',
+  //           scroller: 'body',
+  //           start: 'top 120%',
+  //           scrub: true
+  //       }
+  //   })
+  // })
   return (
-    <div
-      ref={containerRef}
-      className={` w-auto flex gap-8 border-none py-6`}
-    >
-      {trustedComapies.map((company) => {
-        return (
-          <div key={company.companyName} className=" animated-companies">
-            <img src={company.companyLogo} className="min-h-[100px] h-[100px] rounded-xl shadow-lg object-cover w-[200px] min-w-[200px]" alt="" />
-          </div>
-        );
-      })}
-    </div>
+    // <div
+    //   ref={containerRef}
+    //   className={` w-auto flex gap-8 border-none py-6`}
+    // >
+    <div className="flex gap-8 py-2 animate-scroll">
+    {trustedComapies.concat(trustedComapies).map((company, index) => (
+      <img
+        key={index}
+        src={company.companyLogo}
+        className="min-h-[100px] inline-block mx-3 h-[100px] rounded-xl shadow-lg object-cover w-[200px] min-w-[200px]"
+        alt=""
+      />
+    ))}
+  </div>
+    // </div>
   );
 };
 

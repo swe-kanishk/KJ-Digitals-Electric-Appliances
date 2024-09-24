@@ -67,16 +67,16 @@ function Home() {
               See all available products <FaArrowCircleRight size={"20px"} />
             </Link>
           </div>
-          <div className="flex gap-3 w-full xl:flex-1 items-end h-full pr-6 justify-between">
+          <div className="flex lg:gap-3 items-end w-full xl:flex-1 h-full lg:pr-6 justify-between">
             <img
               src="https://i.pinimg.com/564x/f0/a3/ef/f0a3efaa6be4fac83e00d06181735e8c.jpg"
-              className="rounded-2xl lg:flex self-end my-3 w-2/4"
+              className="rounded-2xl lg:flex lg:w-3/4 xl:hidden 2xl:flex 2xl:w-2/4 self-end mt-3 w-2/4"
               alt=""
             />
 
-            <div className="h-fit flex lg:hidden xl:flex self-end my-3 rounded-2xl flex-1 overflow-hidden w-full relative ">
+            <div className="h-fit flex lg:hidden xl:flex self-end mt-3 rounded-2xl flex-1 overflow-hidden w-full relative ">
               <img
-                className="hidden lg:flex lg:rounded-2xl"
+                className="hidden lg:flex min-w-[600px] lg:rounded-2xl"
                 src="https://i.pinimg.com/564x/bb/46/cc/bb46cce207cc28ca37d6c70854560c25.jpg"
                 alt=""
               />
@@ -99,12 +99,12 @@ function Home() {
                   Expert Support Available 24/7.
                 </li>
               </ul>
-              <Link
+              {/* <Link
                 to="/contact"
                 className="absolute bottom-5 right-5 text-white z-20 border-white border-2 rounded-lg bg-black px-4 py-2 hover:bg-purple-700 font-medium"
               >
                 Contact us!
-              </Link>
+              </Link> */}
             </div>
             <div className="relative w-fit lg:hidden flex justify-end">
             <img
@@ -123,7 +123,7 @@ function Home() {
           <div className="relative hidden lg:flex justify-end">
             <img
               src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
-              className="absolute max-h-[300px] lg:h-[400px] z-10 rounded-xl bottom-0 right-[40%] lg:right-[70%] border-4 border-white"
+              className="absolute max-h-[400px] lg:h-[400px] z-10 rounded-xl bottom-0 right-[40%] lg:right-[70%] border-4 border-white"
               alt=""
             />
             <img
@@ -134,9 +134,12 @@ function Home() {
           </div>
       </section>
 
-      <section className="bg-[#151515] px-3 py-4 flex flex-col gap-3">
-        <h1 className="text-2xl text-white font-medium">
+      <section className="lg:bg-[#151515] lg:py-4 flex flex-col gap-3">
+        <h1 className="text-2xl hidden sm:flex lg:text-white font-medium">
           Explore Our Trusted Brands and Find Your Perfect Match!
+        </h1>
+        <h1 className="text-2xl px-2 sm:hidden lg:text-white font-medium">
+          Explore Our Trusted Brands!
         </h1>
         <section className="overflow-hidden bg-[#151515] w-[100vw]">
           <TrustedCompanies />
