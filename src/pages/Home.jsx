@@ -23,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Home() {
   return (
     <>
-      <marquee behavior="scroll" direction="left" className="my-3">
+      <marquee behavior="scroll" direction="left" className="py-3 text-white bg-[#6c25df]">
         <div className="flex items-center">
           <span>
             KJ Digitals : near shiv mandir, main road, simri bakhtiyarpur,
@@ -49,7 +49,7 @@ function Home() {
       </marquee>
 
       <section className="relative flex flex-col lg:flex-row justify-between min-h-[65vh] sm:min-h-[70vh] md:min-h[75vh] lg:min-h-[85vh]">
-        <div className="flex xl:flex-wrap xl:justify-center justify-between pt-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-6 xl:w-1/2">
+        <div className="flex xl:flex-wrap xl:justify-center justify-between pt-[6%] pb-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-6 xl:w-1/2">
           <div className="text-center lg:text-start mx-auto px-3 flex flex-col gap-6">
             <h1 className="md:text-[2rem] text-[1.2rem] sm:text-[1.5rem] font-bold">
               Smart Living Starts Here
@@ -67,10 +67,10 @@ function Home() {
               See all available products <FaArrowCircleRight size={"20px"} />
             </Link>
           </div>
-          <div className="flex gap-3 w-full xl:flex-1 lg:items-end h-full pr-6 justify-between">
+          <div className="flex gap-3 w-full xl:flex-1 items-end h-full pr-6 justify-between">
             <img
               src="https://i.pinimg.com/564x/f0/a3/ef/f0a3efaa6be4fac83e00d06181735e8c.jpg"
-              className="rounded-2xl hidden lg:flex self-end my-3 w-2/4"
+              className="rounded-2xl lg:flex self-end my-3 w-2/4"
               alt=""
             />
 
@@ -109,11 +109,11 @@ function Home() {
             <div className="relative w-fit lg:hidden flex justify-end">
             <img
               src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
-              className="absolute max-h-[300px] h-[250px] z-10 rounded-xl bottom-0 right-[30%]  border-4 border-white"
+              className="absolute max-w-[300px] hidden md:flex h-[250px] z-10 rounded-xl bottom-0 right-[70%]  border-4 border-white"
               alt=""
             />
             <img
-              className="rounded-xl lg:w-auto relative left-[1rem] w-1/2"
+              className="rounded-xl lg:w-auto relative left-[1rem] w-full"
               src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg"
               alt=""
             />
