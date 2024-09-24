@@ -49,7 +49,7 @@ function Home() {
       </marquee>
 
       <section className="relative flex flex-col lg:flex-row justify-between bg-red-400 min-h-[85vh]">
-        <div className="flex xl:flex-wrap xl:justify-center bg-green-400 pt-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-12 xl:gap-4 xl:w-1/2">
+        <div className="flex xl:flex-wrap xl:justify-center justify-between bg-green-400 pt-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-12 xl:gap-4 xl:w-1/2">
           <div className="text-center lg:text-start mx-auto px-3 flex flex-col gap-6">
             <h1 className="md:text-[2rem] text-[1.2rem] sm:text-[1.5rem] font-bold">
               Smart Living Starts Here
