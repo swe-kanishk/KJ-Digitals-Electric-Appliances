@@ -12,6 +12,8 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 import { FaUserPlus } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa6";
 import { IoMdSearch } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+
 
 function Navbar() {
   const [open, setIsOpen] = useState(false)
@@ -71,8 +73,10 @@ function Navbar() {
           <IoSearch size={"24px"} />
         </button>
       </div>
-      <div onClick={() => setIsOpen(!open)}className="lg:hidden cursor-pointer">
-      <RxHamburgerMenu size={'26px'} />
+      <div onClick={() => setIsOpen(!open)} className="lg:hidden cursor-pointer text-gray-500">
+        {
+          !open ? <RxHamburgerMenu size={'26px'} /> : <IoIosCloseCircleOutline size={'30px'} />
+        }
       </div>
     </nav>
     <div className="h-[65px]"></div>
