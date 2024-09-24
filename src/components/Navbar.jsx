@@ -7,8 +7,15 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import kitchen from '../../public/pngwing.com (1).png'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IoIosHome } from "react-icons/io";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { FaUserPlus } from "react-icons/fa";
+import { FaCartArrowDown } from "react-icons/fa6";
+import { IoMdSearch } from "react-icons/io";
 
 function Navbar() {
+  const [open, setIsOpen] = useState(false)
+
   useGSAP(() => {
     gsap.fromTo("nav", 
       { 
@@ -29,7 +36,7 @@ function Navbar() {
   });
   return (
     <>
-    <nav className="flex items-center justify-between z-20 border-b border-gray-300 fixed top-0 left-0 w-full bg-white px-6 py-2">
+    <nav className="flex items-center justify-between z-30 border-b border-gray-300 fixed top-0 left-0 w-full bg-white lg:px-6 px-3 py-2">
       <Link to="/" className="flex items-center gap-12">
         <div className="flex items-center gap-2 font-medium text-xl">
           <img
@@ -64,9 +71,39 @@ function Navbar() {
           <IoSearch size={"24px"} />
         </button>
       </div>
-      <RxHamburgerMenu size={'26px'} className="lg:hidden" />
+      <div onClick={() => setIsOpen(!open)}className="lg:hidden cursor-pointer">
+      <RxHamburgerMenu size={'26px'} />
+      </div>
     </nav>
     <div className="h-[65px]"></div>
+    <div className={`h-screen bg-white transition-transform overflow-hidden duration-500 ${open ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'} flex flex-col justify-between border-r border-gray-400 inset-0 z-20 px-3 py-3 w-fit fixed top-0`}>
+    <Link to="/" className="flex items-center gap-12">
+        <div className="flex items-center gap-2 font-medium text-xl">
+          <img
+            src={logoimage}
+            alt="Logo"
+            className="h-12 w-12 rounded-full object-cover object-center"
+          />
+          <hr />
+        </div>
+      </Link>
+      <div className="flex flex-col items-center rounded-xl justify-start gap-8 my-6 h-2/3">
+          <NavLink onClick={() => setIsOpen(!open)} to="/" className="bg-white aspect-square flex items-center justify-center text-black"><IoIosHome size={'28px'} /></NavLink>
+          <NavLink onClick={() => setIsOpen(!open)} to="/search" className="bg-white aspect-square flex items-center justify-center text-black"><IoMdSearch size={'28px'} /></NavLink>
+          <NavLink onClick={() => setIsOpen(!open)} to="/contact" className="bg-white aspect-square flex items-center justify-center text-black"><FaUserPlus size={'28px'} /></NavLink>
+          <NavLink onClick={() => setIsOpen(!open)} to="/products" className="bg-white aspect-square flex items-center justify-center text-black"><FaCartArrowDown size={'28px'} /></NavLink>
+          <NavLink onClick={() => setIsOpen(!open)} to="/about" className="bg-white aspect-square flex items-center justify-center text-black"><IoMdInformationCircleOutline size={'28px'} /></NavLink>
+      </div>
+      <div className="bg-black h-12 w-full fixed flex items-center justify-center left-0 bottom-0">
+      <Link to="/">
+          <img
+            src={logoimage}
+            alt="Logo"
+            className="h-8 w-8 rounded-full object-cover object-center"
+          />
+      </Link>
+      </div>
+    </div>
     </>
   );
 }

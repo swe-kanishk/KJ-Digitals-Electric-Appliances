@@ -8,7 +8,7 @@ import { IoMdCall } from "react-icons/io";
 
 function Footer() {
   return (
-    <footer className='border-t bg-white z-50 border-gray-300'>
+    <footer className='border-t bg-white z-10 border-gray-300'>
       <div className="flex flex-col justify-between gap-4 py-6 px-6 bg-white">
         <div className="flex items-center gap-2 font-medium text-xl">
           <img
