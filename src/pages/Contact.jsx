@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoMdCall } from "react-icons/io";
+import Success from "../components/Success";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,8 @@ function Contact() {
   const [customerName, setCustomerName] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false)
+
 
   function onSubmit(e) {
     e.preventDefault();
@@ -24,7 +27,7 @@ function Contact() {
         .then((response) => response.json())
         .then((response) => {
           if (response.code === 200) {
-            alert("We received your submission, thank you!");
+            setSuccess(!success)
           } else if (response.code === 422) {
             // Field validation failed
             setError(response.message);
@@ -37,10 +40,17 @@ function Contact() {
           // request related error.
           setError(error.message ? error.message : error);
         });
+        setTimeout(() => {
+          setSuccess(false)
+        }, 3000)
     }
 
     
   return (
+    <>
+    {
+      success ? <Success /> : ''
+    }
     <div className="flex flex-col">
     <form onSubmit={(e) => onSubmit(e)} className="flex border border-black">
       <div className="flex h-fit md:h-[500px] pt-8 flex-1">
@@ -142,6 +152,7 @@ function Contact() {
       <div className="w-[10%] bg-black relative"></div>
       </div>
       </div>
+      </>
   );
 }
 

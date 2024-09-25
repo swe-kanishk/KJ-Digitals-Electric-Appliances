@@ -1,1234 +1,602 @@
 export const productData = [
-  {
-    id: "001",
-    name: "Samsung 43 Inch 4K Ultra HD Smart LED TV",
-    category: "Television",
-    brand: "Samsung",
-    price: 39999,
-    description:
-      "Experience stunning 4K picture quality with the Samsung 43-inch Ultra HD Smart LED TV. Enjoy vibrant colors, sharp contrasts, and seamless streaming with built-in apps like Netflix, YouTube, and more.",
-    specifications: {
-      resolution: "3840x2160",
-      screen_size: "43 inches",
-      smart_tv: true,
-      connectivity: ["Wi-Fi", "HDMI", "USB"],
-      refresh_rate: "60Hz",
-      audio: "20W",
-      operating_system: "Tizen",
+    {
+        "id": 1,
+        "brand": "IFB",
+        "product_name": "Elena SXN 6510",
+        "product_detail": "IFB Elena SXS Front Load Washing Machine 6.5 kg | 1000 rpm | Silver",
+        "capacity": "6.5kg | 1000",
+        "color": {
+            "bodyColor": "Rich Silver",
+            "doorColor": "Black"
+        },
+        "size": "603 X 518 X 875",
+        "category": "washing_machine",
+        "netWeight": "65kg",
+        "product_img": "/washingMachineImg/elena_sxs_6.5kg_front_load_fv.webp",
+        "discription": {
+            "Key_Features": "Powered by Ai, Power Steam®, 9 Swirl Wash, Refresh",
+            "Additional_Features": "3D Wash, Eco Inverter Motor, Aqua Energie, load Sensing, Touch Control",
+            "Feature_Programs": "MixDaily, Cotton, Baby Wear, Refresh, Express'15, Wool, Synthetic, Cradle Wash®, SpinDry/Rinse, Bulky, Tub Clean"
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "John Doe",
-        rating: 5,
-        comment: "Amazing picture quality! Worth every penny.",
-      },
-      {
-        user: "Jane Smith",
-        rating: 4,
-        comment: "Great TV but the sound could be better.",
-      },
-    ],
-    stock: 20,
-    discount: 10,
-    images: ["samsung_tv1.jpg", "samsung_tv2.jpg"],
-  },
-  {
-    id: "002",
-    name: "LG 7kg Fully Automatic Front Load Washing Machine",
-    category: "Washing Machine",
-    brand: "LG",
-    price: 25999,
-    description:
-      "This LG 7kg fully automatic front load washing machine offers powerful cleaning with 6 motion technology and a durable inverter motor. The perfect choice for small to medium households.",
-    specifications: {
-      capacity: "7kg",
-      type: "Front Load",
-      energy_rating: "5 Star",
-      wash_programs: 12,
-      spin_speed: "1200 RPM",
-      drum_material: "Stainless Steel",
+    {
+        "id": 2,
+        "brand": "IFB",
+        "product_name": "Senorita MSN 6512K",
+        "product_detail": "IFB Senorita MSN 6512K Front Load Washing Machine 6.5 Kg | 1200 rpm | Metallic Silver",
+        "capacity": "6.5kg | 1200",
+        "color": {
+            "bodyColor": "Metallic Silver",
+            "doorColor": "Black"
+        },
+        "size": "598 X 518 X 875",
+        "category": "washing_machine",
+        "netWeight": "66kg",
+        "product_img": "/washingMachineImg/senorita-msn-k_6.5kg-fv300.webp",
+        "discription": {
+            "Key_Features": "Powered by Ai, Power Steam®, 9 Swirl Wash, Refresh, Warm Soak",
+            "Additional_Features": "3D Wash, Eco Inverter Motor, Aqua Energie, load Sensing, Touch Control, Time Saver",
+            "Feature_Programs": "sh, Refresh, Warm Soak MixDaily, Cotton, Baby Wear, Refresh, Express'15, Wool, Synthetic, Cradle Wash®, SpinDry/ Rinse, Bulky, Tub Clean"
+        }
     },
-    rating: 4.3,
-    reviews: [
-      {
-        user: "Amit Patel",
-        rating: 5,
-        comment: "Very efficient and easy to use!",
-      },
-      {
-        user: "Rita Verma",
-        rating: 4,
-        comment: "Good washing machine but slightly noisy.",
-      },
-    ],
-    stock: 15,
-    discount: 8,
-    images: ["lg_wm1.jpg", "lg_wm2.jpg"],
-  },
-  {
-    id: "003",
-    name: "Apple MacBook Air 13-inch with M1 Chip",
-    category: "Laptop",
-    brand: "Apple",
-    price: 92999,
-    description:
-      "The Apple MacBook Air with M1 chip redefines performance. With an 8-core CPU, 8-core GPU, and up to 18 hours of battery life, it's built for speed and power efficiency.",
-    specifications: {
-      processor: "Apple M1",
-      ram: "8GB",
-      storage: "256GB SSD",
-      display: "13.3-inch Retina",
-      battery_life: "Up to 18 hours",
-      operating_system: "macOS Big Sur",
+    {
+        "id": 3,
+        "brand": "IFB",
+        "product_name": "Senorita BXN 6512",
+        "product_detail": "IFB Senorita BXN 6512 Front Load Washing Machine 6.5 kg | 1200 | Black",
+        "capacity": "6.5kg | 1200",
+        "color": {
+            "bodyColor": "Black",
+            "doorColor": "Black with Chrome"
+        },
+        "size": "598 X 518 X 875",
+        "category": "washing_machine",
+        "netWeight": "66kg",
+        "product_img": "/washingMachineImg/senorita-bxn-6.5kg-fv.webp",
+        "discription": {
+            "Key_Features": "Powered by Ai, Power Steam®, 9 Swirl Wash, Refresh",
+            "Additional_Features": "3D Wash, Eco Inverter Motor, Aqua Energie, load Sensing, Touch Control",
+            "Feature_Programs": "MixDaily, Cotton, Baby Wear, Refresh, Express'15, Wool, Synthetic, Cradle Wash®, SpinDry/Rinse, Bulky, Tub Clean"
+        }
     },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Nikhil Rao",
-        rating: 5,
-        comment: "Blazing fast performance! Best laptop I've owned.",
-      },
-      {
-        user: "Sanya Kapoor",
-        rating: 5,
-        comment: "Lightweight, fast, and perfect for everyday use.",
-      },
-    ],
-    stock: 10,
-    discount: 5,
-    images: ["macbook_air1.jpg", "macbook_air2.jpg"],
-  },
-  {
-    id: "004",
-    name: "Sony WH-1000XM4 Wireless Noise Cancelling Headphones",
-    category: "Headphones",
-    brand: "Sony",
-    price: 24999,
-    description:
-      "Sony's WH-1000XM4 wireless headphones offer industry-leading noise cancellation, long battery life, and superior sound quality. Ideal for music lovers and frequent travelers.",
-    specifications: {
-      type: "Over-Ear",
-      noise_cancellation: true,
-      battery_life: "30 hours",
-      connectivity: "Bluetooth 5.0",
-      charging_time: "3 hours",
-      microphone: true,
+    {
+        "id": 4,
+        "brand": "IFB",
+        "product_name": "Senorita SXN 6512K",
+        "product_detail": "IFB Senorita SXN 6512K Front Load Washing Machine 6.5 kg | 1200 | Rich Silver",
+        "capacity": "6.5kg | 1200",
+        "color": {
+            "bodyColor": "Rich Silver",
+            "doorColor": "Black"
+        },
+        "size": "598 X 518 X 875",
+        "category": "washing_machine",
+        "netWeight": "66kg",
+        "product_img": "./washingMachineImg/senorita-sxn-k-6.5kg-fv_1.webp",
+        "discription": {
+            "Key_Features": "Powered by Ai, Power Steam®, 9 Swirl Wash, Refresh, Warm Soak",
+            "Additional_Features": "3D Wash, Eco Inverter Motor, Aqua Energie, load Sensing, Touch Control, Time Saver",
+            "Feature_Programs": "sh, Refresh, Warm Soak MixDaily, Cotton, Baby Wear, Refresh, Express'15, Wool, Synthetic, Cradle Wash®, SpinDry/ Rinse, Bulky, Tub Clean"
+        }
     },
-    rating: 4.8,
-    reviews: [
-      {
-        user: "Mehul Singh",
-        rating: 5,
-        comment: "Best noise-cancelling headphones out there!",
-      },
-      {
-        user: "Priya Mehta",
-        rating: 4,
-        comment: "Great sound but a bit pricey.",
-      },
-    ],
-    stock: 25,
-    discount: 12,
-    images: ["sony_headphones1.jpg", "sony_headphones2.jpg"],
-  },
-  {
-    id: "005",
-    name: "Samsung Galaxy S21 Ultra 5G",
-    category: "Smartphone",
-    brand: "Samsung",
-    price: 105999,
-    description:
-      "Samsung Galaxy S21 Ultra 5G offers the best of Samsung's technology with a 108MP camera, 5G connectivity, and a 5000mAh battery. Experience stunning performance and incredible visuals.",
-    specifications: {
-      display: "6.8-inch Dynamic AMOLED",
-      processor: "Exynos 2100",
-      ram: "12GB",
-      storage: "256GB",
-      battery: "5000mAh",
-      camera: "108MP + 12MP + 10MP + 10MP",
-      os: "Android 11",
+    {
+        "id": 5,
+        "brand": "IFB",
+        "product_name": "TL701AG1",
+        "product_detail": "IFB TL701AG1 Top Load Washing Machine 7 kg | 720 rpm | Anthracite Grey",
+        "capacity": "7kg | 720",
+        "color": {
+            "bodyColor": "Anthracite Grey",
+            "doorColor": "Stainless Steel"
+        },
+        "size": "543 x 575 x 946",
+        "category": "washing_machine",
+        "netWeight": "31kg",
+        "product_img": "./washingMachineImg/tl-701ag1-fv.webp",
+        "discription": {
+            "Key_Features": "Powered By AI : A neural network-based algorithm detects fabric type and weight. It then optimises the wash—duration, water level, wash    actions and the level of gentleness needed.",
+            "Additional_Features": "Active Mix : Premixes water and detergent for better and faster detergent action.",
+            "Feature_Programs": "Aqua Energie : IFB's patented Aqua Energie treats hard water and improves detergent action to protect color and prevent fading."
+        }
     },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Vikram Sharma",
-        rating: 5,
-        comment: "The best camera and display on any phone!",
-      },
-      {
-        user: "Ankita Rao",
-        rating: 4,
-        comment: "Amazing performance but quite expensive.",
-      },
-    ],
-    stock: 12,
-    discount: 7,
-    images: ["samsung_s21_ultra1.jpg", "samsung_s21_ultra2.jpg"],
-  },
-  {
-    id: "006",
-    name: "Philips Air Fryer HD9252/90",
-    category: "Kitchen Appliance",
-    brand: "Philips",
-    price: 8999,
-    description:
-      "Philips Air Fryer uses Rapid Air Technology to fry food with little to no oil, making it a healthier alternative. Enjoy crispy fries, snacks, and much more with ease.",
-    specifications: {
-      capacity: "4.1 L",
-      power_consumption: "1400W",
-      temperature_control: true,
-      material: "Plastic",
-      auto_shut_off: true,
+    {
+        "id": 6,
+        "brand": "IFB",
+        "product_name": "TL-SIBS",
+        "product_detail": "IFB TL-SIBS 10.0KG AQUA Top Load Washing Machine 720 rpm | Inox",
+        "capacity": "10kg | 720",
+        "color": {
+            "bodyColor": "Inox Finish",
+            "doorColor": "Glass Transparent"
+        },
+        "size": "620 x 640 x 1030",
+        "category": "washing_machine",
+        "netWeight": "31kg",
+        "product_img": "./washingMachineImg/tl-sibs_10.0kg_fv.webp",
+        "discription": {
+            "Key_Features": "Powered By AI : A neural network-based algorithm detects fabric type and weight. It then optimises the wash—duration, water level, wash actions and the level of gentleness needed.",
+            "Additional_Features": "Power Steam® : 99.99% germ-free clothes with a Dual Steam Cycle and Hot Wash up to 60˚C. Get the highest level of hygiene for your laundry.",
+            "Feature_Programs": "Hot Wash At 60°C : State-of-the-art heater technology tested to last at least 10 years. Scale proof, rust proof and even saves you energy while giving you 99.99% germ free washing!"
+        }
     },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Manish Gupta",
-        rating: 5,
-        comment: "Perfect for healthy cooking!",
-      },
-      {
-        user: "Radhika Menon",
-        rating: 4,
-        comment: "Works great but takes time to cook.",
-      },
-    ],
-    stock: 30,
-    discount: 15,
-    images: ["philips_airfryer1.jpg", "philips_airfryer2.jpg"],
-  },
-  {
-    id: "007",
-    name: "Dell Inspiron 15 5502 Laptop",
-    category: "Laptop",
-    brand: "Dell",
-    price: 65999,
-    description:
-      "Dell Inspiron 15 offers excellent performance with Intel's 11th Gen i5 processor, 8GB RAM, and 512GB SSD. The 15.6-inch FHD display is perfect for work and entertainment.",
-    specifications: {
-      processor: "Intel Core i5-1135G7",
-      ram: "8GB",
-      storage: "512GB SSD",
-      display: "15.6-inch FHD",
-      battery_life: "Up to 10 hours",
-      os: "Windows 10",
+    {
+        "id": 7,
+        "brand": "IFB",
+        "product_name": "TL801MB1S",
+        "product_detail": "IFB TL801MB1S Top Load Washing Machine 8 kg | 720 rpm | Mid Night Black",
+        "capacity": "8kg | 720",
+        "color": {
+            "bodyColor": "Mid Night Black",
+            "doorColor": "Stainless Steel"
+        },
+        "size": "543 x 575 x 946",
+        "category": "washing_machine",
+        "netWeight": "31kg",
+        "product_img": "./washingMachineImg/tl-801mb1s-fv.webp",
+        "discription": {
+            "Key_Features": "Powered By AI : A neural network-based algorithm detects fabric type and weight. It then optimises the wash—duration, water level, wash actions and the level of gentleness needed.",
+            "Additional_Features": "Active Mix : Premixes water and detergent for better and faster detergent action.",
+            "Feature_Programs": "Power Steam® : 99.99% germ-free clothes with a Dual Steam Cycle and Hot Wash up to 60˚C. Get the highest level of hygiene for your laundry."
+        }
     },
-    rating: 4.4,
-    reviews: [
-      {
-        user: "Ravi Kumar",
-        rating: 5,
-        comment: "Great laptop for both work and entertainment!",
-      },
-      {
-        user: "Sneha Jain",
-        rating: 4,
-        comment: "Solid performance but slightly heavy.",
-      },
-    ],
-    stock: 18,
-    discount: 10,
-    images: ["dell_inspiron1.jpg", "dell_inspiron2.jpg"],
-  },
-  {
-    id: "008",
-    name: "IFB 25 L Convection Microwave Oven",
-    category: "Microwave Oven",
-    brand: "IFB",
-    price: 12999,
-    description:
-      "IFB's 25L convection microwave oven allows you to bake, grill, and reheat with ease. Features include auto-cook menus, defrost function, and easy-to-clean interior.",
-    specifications: {
-      capacity: "25 L",
-      type: "Convection",
-      power_consumption: "1400W",
-      cooking_modes: ["Bake", "Grill", "Reheat"],
-      material: "Stainless Steel",
+    {
+        "id": 8,
+        "brand": "IFB",
+        "product_name": "TL-S4RBS",
+        "product_detail": "IFB TL-S4RBS 10.0KG AQUA Top Load Washing Machine 720 rpm | Royal Blue",
+        "capacity": "10kg | 720",
+        "color": {
+            "bodyColor": "Royal Blue",
+            "doorColor": "Glass Transparent"
+        },
+        "size": "620 x 640 x 1000",
+        "category": "washing_machine",
+        "netWeight": "45kg",
+        "product_img": "./washingMachineImg/tl-s4rbs_10kg_tl_fv.webp",
+        "discription": {
+            "Key_Features": "Powered By AI : A neural network-based algorithm detects fabric type and weight. It then optimises the wash—duration, water level, wash actions and the level of gentleness needed.",
+            "Additional_Features": "Hot Wash At 60°C : State-of-the-art heater technology tested to last at least 10 years. Scale proof, rust proof and even saves you energy while giving you 99.99% germ free washing!",
+            "Feature_Programs": "Power Steam® : 99.99% germ-free clothes with a Dual Steam Cycle and Hot Wash up to 60˚C. Get the highest level of hygiene for your laundry."
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Aarav Khanna",
-        rating: 5,
-        comment: "Excellent microwave for all my cooking needs!",
-      },
-      {
-        user: "Neha Roy",
-        rating: 4,
-        comment: "Good product, but the size could be bigger.",
-      },
-    ],
-    stock: 20,
-    discount: 15,
-    images: ["ifb_microwave1.jpg", "ifb_microwave2.jpg"],
-  },
-  {
-    id: "009",
-    name: "LG 55 Inch OLED 4K Ultra HD Smart TV",
-    category: "Television",
-    brand: "LG",
-    price: 109999,
-    description:
-      "Discover deep blacks and vibrant colors with the LG 55-inch OLED 4K Smart TV. Equipped with Dolby Vision, it offers a cinematic experience with AI-powered sound and display technologies.",
-    specifications: {
-      resolution: "3840x2160",
-      screen_size: "55 inches",
-      smart_tv: true,
-      connectivity: ["Wi-Fi", "Bluetooth", "HDMI", "USB"],
-      refresh_rate: "120Hz",
-      audio: "40W",
-      operating_system: "WebOS",
+    {
+        "id": 9,
+        "brand": "IFB",
+        "product_name": "TL-REW",
+        "product_detail": "IFB TL - REW 6.5 kg Aqua Top Load Washing Machine 720 rpm | White",
+        "capacity": "6.5kg | 720",
+        "color": {
+            "bodyColor": "White",
+            "doorColor": "Molded - White"
+        },
+        "size": "570 x 590 x 950",
+        "category": "washing_machine",
+        "netWeight": "35kg",
+        "product_img": "./washingMachineImg/tl-rew_6.5kg_fv.webp",
+        "discription": {
+            "Key_Features": "Lint Tower Filter : Traps lint and loose microfibres during washing, which otherwise are drained, affecting the environment. Easily removed for cleaning.",
+            "Additional_Features": "Aqua Energie : IFB's patented Aqua Energie treats hard water and improves detergent action to protect color and prevent fading.",
+            "Feature_Programs": "Smart Sense : An inbuilt smart sensing mechanism automatically weighs the load and adjusts settings accordingly to save water and detergent."
+        }
     },
-    rating: 4.8,
-    reviews: [
-      {
-        user: "Michael Scott",
-        rating: 5,
-        comment: "Incredible display! Feels like you're in the scene.",
-      },
-      {
-        user: "Pam Beesly",
-        rating: 4,
-        comment: "Great TV but very expensive.",
-      },
-    ],
-    stock: 15,
-    discount: 5,
-    images: ["lg_oled1.jpg", "lg_oled2.jpg"],
-  },
-  {
-    id: "010",
-    name: "Sony WH-1000XM4 Noise Cancelling Headphones",
-    category: "Headphones",
-    brand: "Sony",
-    price: 29999,
-    description:
-      "Immerse yourself in music with Sony WH-1000XM4 Noise Cancelling Headphones. Industry-leading noise cancellation and smart listening technology provide a superior audio experience.",
-    specifications: {
-      type: "Over-Ear",
-      battery_life: "30 hours",
-      noise_cancellation: true,
-      connectivity: ["Bluetooth", "NFC", "Aux"],
-      microphone: true,
+    {
+        "id": 10,
+        "brand": "IFB",
+        "product_name": "TL-RBR",
+        "product_detail": "IFB TL - RBR 6.5 kg Aqua Top Load Washing Machine 6.5 kg | 720 rpm | Brown",
+        "capacity": "6.5kg | 720",
+        "color": {
+            "bodyColor": "Brown",
+            "doorColor": "Tempered Glass with Chrome Ring"
+        },
+        "size": "570 x 590 x 950",
+        "category": "washing_machine",
+        "netWeight": "37kg",
+        "product_img": "./washingMachineImg/tl_rbr_6.5kg_front_load_fv.webp",
+        "discription": {
+            "Key_Features": "Smart Sense : An inbuilt smart sensing mechanism automatically weighs the load and adjusts settings accordingly to save water and detergent.",
+            "Additional_Features": "Aqua Energie : IFB's patented Aqua Energie treats hard water and improves detergent action to protect color and prevent fading.",
+            "Feature_Programs": "3D Wash : Soaks clothes thoroughly to deliver an excellent wash."
+        }
     },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Dwight Schrute",
-        rating: 5,
-        comment: "Perfect for complete focus in noisy environments.",
-      },
-      {
-        user: "Jim Halpert",
-        rating: 4,
-        comment: "Fantastic sound, but a bit bulky.",
-      },
-    ],
-    stock: 50,
-    discount: 12,
-    images: ["sony_headphones1.jpg", "sony_headphones2.jpg"],
-  },
-  {
-    id: "011",
-    name: "Dyson V11 Absolute Pro Cord-Free Vacuum",
-    category: "Vacuum Cleaner",
-    brand: "Dyson",
-    price: 52999,
-    description:
-      "Clean your home with the Dyson V11 Absolute Pro Cord-Free Vacuum. It provides powerful suction, an LCD screen to monitor battery life, and multiple cleaning modes for different surfaces.",
-    specifications: {
-      suction_power: "185 AW",
-      battery_life: "60 minutes",
-      filter_type: "HEPA",
-      weight: "2.97 kg",
-      warranty: "2 years",
+    {
+        "id": 11,
+        "brand": "IFB",
+        "product_name": "TL-RGS",
+        "product_detail": "IFB TL - RGS 7 kg Aqua Top Load Washing Machine 720 rpm | Medium Grey",
+        "capacity": "7kg | 720",
+        "color": {
+            "bodyColor": "Medium Grey",
+            "doorColor": "Molded - Medium Grey"
+        },
+        "size": "570 x 590 x 950",
+        "category": "washing_machine",
+        "netWeight": "37kg",
+        "product_img": "./washingMachineImg/tl_rgs_7_top_load_fv_1.webp",
+        "discription": {
+            "Key_Features": "Powered By AI : A neural network-based algorithm detects fabric type and weight. It then optimises the wash—duration, water level, wash actions and the level of gentleness needed.",
+            "Additional_Features": "Aqua Energie : IFB's patented Aqua Energie treats hard water and improves detergent action to protect color and prevent fading.",
+            "Feature_Programs": "Ease Of Mobility : Just tilt the machine backwards and roll it to move it around. Two wheels at the back of the machine enable quick mobility."
+        }
     },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Stanley Hudson",
-        rating: 5,
-        comment: "Makes cleaning effortless. Love the cordless design.",
-      },
-      {
-        user: "Phyllis Vance",
-        rating: 4,
-        comment: "Powerful vacuum, but battery drains quickly on max mode.",
-      },
-    ],
-    stock: 25,
-    discount: 8,
-    images: ["dyson_vacuum1.jpg", "dyson_vacuum2.jpg"],
-  },
-  {
-    id: "012",
-    name: "Apple MacBook Pro M1 13-inch",
-    category: "Laptop",
-    brand: "Apple",
-    price: 129999,
-    description:
-      "The Apple MacBook Pro M1 features an 8-core CPU and GPU, 16GB RAM, and a 512GB SSD. It's designed for professionals seeking top performance in a sleek, lightweight form factor.",
-    specifications: {
-      processor: "Apple M1",
-      ram: "16GB",
-      storage: "512GB SSD",
-      screen_size: "13.3 inches",
-      battery_life: "20 hours",
+    {
+        "id": 12,
+        "brand": "LG",
+        "product_name": "P115ASDAZ",
+        "product_detail": "LG 11.5Kg Semi Automatic Top Load Washing Machine, Roller Jet Pulsator + Soak, Burgundy",
+        "capacity": "11kg | 720",
+        "color": {
+            "bodyColor": "Full Burgundy",
+            "doorColor": "Full Burgundy"
+        },
+        "size": "905 x 1025 x 545",
+        "category": "washing_machine",
+        "netWeight": "32kg",
+        "product_img": "./washingMachineImg/P115ASDAZ-Basic-450.avif",
+        "discription": {
+            "Key_Features": "Wind Jet Dry Reduces remaining moisture on laundry and inside of washing machine by Spin tub rotating at high RPM, air comes into the tub and is circulated inside which removes water. Circulation of air through air vents dries clothes.",
+            "Additional_Features": "Auto Restart allows the program to restart all by itself in case of power failure. It resumes from stage where it stopped, however, the wash cycle time may vary.",
+            "Feature_Programs": "The machine’s unique soak process soaks clothes in a concentrated detergent solution to help loosen tough dirt particles."
+        }
     },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Ryan Howard",
-        rating: 5,
-        comment: "Blazing fast performance! Perfect for video editing.",
-      },
-      {
-        user: "Kelly Kapoor",
-        rating: 4,
-        comment: "Amazing laptop but quite expensive.",
-      },
-    ],
-    stock: 30,
-    discount: 5,
-    images: ["macbook_pro1.jpg", "macbook_pro2.jpg"],
-  },
-  {
-    id: "013",
-    name: "Bose SoundLink Revolve+ Bluetooth Speaker",
-    category: "Bluetooth Speaker",
-    brand: "Bose",
-    price: 19999,
-    description:
-      "Experience true 360-degree sound with the Bose SoundLink Revolve+ Bluetooth Speaker. It delivers deep, immersive audio in a compact, portable design with up to 16 hours of battery life.",
-    specifications: {
-      battery_life: "16 hours",
-      water_resistance: "IPX4",
-      connectivity: ["Bluetooth", "Aux"],
-      weight: "0.9 kg",
+    {
+        "id": 13,
+        "brand": "LG",
+        "product_name": "P7020NGAZ",
+        "product_detail": "LG 7Kg Semi Automatic Top Load Washing Machine, Rat Away Technology, Dark Gray",
+        "capacity": "7kg | 720",
+        "color": {
+            "bodyColor": "Dark Grey",
+            "doorColor": "Dark Grey"
+        },
+        "size": "810 x 480 x 980",
+        "category": "washing_machine",
+        "netWeight": "26kg",
+        "product_img": "./washingMachineImg/P7020NGAZ-Washing-Machines-Front-View-450.avif",
+        "discription": {
+            "Key_Features": "The machine has 3 different wash programs(Gentle, Normal, Strong) ensuring a safe and customized wash for every fabric type.",
+            "Additional_Features": "The lint filter collects the lint which come out while washing clothes. The fabric thus do not get stuck in the pipe, thus gives a better washing performance.",
+            "Feature_Programs": "Its unique collar scrubber helps you scrub cuffs and collars, saving your time and efforts."
+        }
     },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Meredith Palmer",
-        rating: 5,
-        comment: "Amazing sound quality! Great for outdoor parties.",
-      },
-      {
-        user: "Creed Bratton",
-        rating: 4,
-        comment: "Solid speaker, but wish it was fully waterproof.",
-      },
-    ],
-    stock: 40,
-    discount: 10,
-    images: ["bose_speaker1.jpg", "bose_speaker2.jpg"],
-  },
-  {
-    id: "014",
-    name: "HP Pavilion Gaming Laptop",
-    category: "Laptop",
-    brand: "HP",
-    price: 79999,
-    description:
-      "The HP Pavilion Gaming Laptop features a 9th Gen Intel Core i7 processor and NVIDIA GTX 1650 for an immersive gaming experience. Perfect for both work and play.",
-    specifications: {
-      processor: "Intel Core i7",
-      ram: "16GB",
-      storage: "1TB HDD + 256GB SSD",
-      graphics: "NVIDIA GTX 1650",
-      screen_size: "15.6 inches",
-      refresh_rate: "144Hz",
+    {
+        "id": 14,
+        "brand": "LG",
+        "product_name": "P105ASRAZ",
+        "product_detail": "LG 10.5Kg Semi Automatic Top Load Washing Machine, Roller Jet Pulsator + Soak, Burgundy",
+        "capacity": "10.5kg | 720",
+        "color": {
+            "bodyColor": "Burgundy",
+            "doorColor": "Burgundy"
+        },
+        "size": "905 x 1025 x 545",
+        "category": "washing_machine",
+        "netWeight": "32kg",
+        "product_img": "./washingMachineImg/P105ASRAZ-Washing-Machines-Front-View-450.avif",
+        "discription": {
+            "Key_Features": "Wind Jet Dry Reduces remaining moisture on laundry and inside of washing machine by Spin tub rotating at high RPM, air comes into the tub and is circulated inside which removes water. Circulation of air through air vents dries clothes.",
+            "Additional_Features": "Auto Restart allows the program to restart all by itself in case of power failure. It resumes from stage where it stopped, however, the wash cycle time may vary.",
+            "Feature_Programs": "The machine’s unique soak process soaks clothes in a concentrated detergent solution to help loosen tough dirt particles."
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Oscar Martinez",
-        rating: 5,
-        comment: "Handles all my games smoothly with no lag.",
-      },
-      {
-        user: "Angela Martin",
-        rating: 4,
-        comment: "Great gaming laptop but can get hot under heavy use.",
-      },
-    ],
-    stock: 35,
-    discount: 7,
-    images: ["hp_gaming_laptop1.jpg", "hp_gaming_laptop2.jpg"],
-  },
-  {
-    id: "015",
-    name: "Philips Air Fryer XXL",
-    category: "Kitchen Appliance",
-    brand: "Philips",
-    price: 18999,
-    description:
-      "Enjoy healthy, crispy meals with the Philips Air Fryer XXL. It uses hot air to fry your food with little to no oil, delivering delicious results without the guilt.",
-    specifications: {
-      capacity: "7 liters",
-      power: "2225W",
-      cooking_modes: ["Fry", "Bake", "Grill", "Roast"],
-      temperature_range: "60-200°C",
-      material: "Stainless Steel",
+    {
+        "id": 15,
+        "brand": "LG",
+        "product_name": "P8015SBAZ",
+        "product_detail": "LG 8Kg Semi Automatic Top Load Washing Machine, Roller Jet Pulsator + Soak, Dark Blue",
+        "capacity": "8kg | 720",
+        "color": {
+            "bodyColor": "Full Dark Blue",
+            "doorColor": "Full Dark Blue"
+        },
+        "size": "795 x 975 x 480",
+        "category": "washing_machine",
+        "netWeight": "25kg",
+        "product_img": "./washingMachineImg/P8015SBAZ-Basic-450.avif",
+        "discription": {
+            "Key_Features": "Wind Jet Dry Reduces remaining moisture on laundry and inside of washing machine by Spin tub rotating at high RPM, air comes into the tub and is circulated inside which removes water. Circulation of air through air vents dries clothes",
+            "Additional_Features": "The lint filter collects the lint which come out while washing clothes. The fabric thus do not get stuck in the pipe, thus gives a better washing performance",
+            "Feature_Programs": "The machine’s unique soak process soaks clothes in a concentrated detergent solution to help loosen tough dirt particles."
+        }
     },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Kevin Malone",
-        rating: 5,
-        comment: "Fries come out perfectly crispy! A must-have for foodies.",
-      },
-      {
-        user: "Andy Bernard",
-        rating: 4,
-        comment: "Great air fryer, but it takes up a lot of space.",
-      },
-    ],
-    stock: 25,
-    discount: 10,
-    images: ["philips_airfryer1.jpg", "philips_airfryer2.jpg"],
-  },
-  {
-    id: "016",
-    name: "Canon EOS 1500D DSLR Camera",
-    category: "Camera",
-    brand: "Canon",
-    price: 45999,
-    description:
-      "Capture stunning photos with the Canon EOS 1500D DSLR Camera. It features a 24.1MP APS-C CMOS sensor and DIGIC 4+ processor, making it perfect for beginners and photography enthusiasts.",
-    specifications: {
-      megapixels: "24.1MP",
-      sensor_type: "APS-C CMOS",
-      video_resolution: "Full HD",
-      connectivity: ["Wi-Fi", "NFC"],
-      battery_life: "500 shots",
+    {
+        "id": 16,
+        "brand": "LG",
+        "product_name": "GL-N292BDSY",
+        "product_detail": "LG 242L, 2 Star, Smart Inverter Compressor, Dazzle Steel Finish, Frost-Free Double Door Refrigerator",
+        "capacity": "242L",
+        "color": {
+            "bodyColor": "Dazzle Steel",
+            "doorColor": "Dazzle Steel"
+        },
+        "size": "585 x 669 x 1475",
+        "category": "fridge",
+        "netWeight": "48kg",
+        "product_img": "./fridge/id16.avif",
+        "discription": {
+            "Key_Features": "The new range of LG Frost Free Refrigerators with cutting edge Smart Inverter Compressor technology that takes energy efficiency to another level and helps you save more. Not only this, it comes with 10 year warranty and provides super silent operation.",
+            "Additional_Features": "MOIST ‘N’ FRESH is an innovative lattice-patterned box cover which maintains the moisture at the optimal level.",
+            "Feature_Programs": "Multiple cooling air vents distribute and circulate cool air to every corner of the refrigerator, ensuring that each and every food item is properly cooled."
+        }
     },
-    rating: 4.4,
-    reviews: [
-      {
-        user: "Darryl Philbin",
-        rating: 5,
-        comment:
-          "Excellent camera for beginners. Easy to use and great image quality.",
-      },
-      {
-        user: "Toby Flenderson",
-        rating: 4,
-        comment: "Great camera, but Wi-Fi transfers can be slow.",
-      },
-    ],
-    stock: 40,
-    discount: 8,
-    images: ["canon_eos1.jpg", "canon_eos2.jpg"],
-  },
-  {
-    id: "017",
-    name: "Samsung Galaxy Watch 4",
-    category: "Smartwatch",
-    brand: "Samsung",
-    price: 29999,
-    description:
-      "Stay connected and track your fitness with the Samsung Galaxy Watch 4. It features a sleek design, advanced health monitoring, and integration with Samsung Galaxy devices.",
-    specifications: {
-      display_size: "1.4 inches",
-      battery_life: "40 hours",
-      water_resistance: "IP68",
-      connectivity: ["Bluetooth", "Wi-Fi", "NFC"],
-      health_monitoring: ["Heart Rate", "ECG", "Sleep Tracking"],
+    {
+        "id": 17,
+        "brand": "LG",
+        "product_name": "GL-C322KPZY",
+        "product_detail": "LG 291L, 2 Star, Smart Inverter Compressor, Door Cooling+™, Jet Ice , Smart Diagnosis™, Shiny Steel Finish, Frost-Free Double Door Refrigerator",
+        "capacity": "291L",
+        "color": {
+            "bodyColor": "Shiny Steel",
+            "doorColor": "Shiny Steel"
+        },
+        "size": "585 x 1675 x 703",
+        "category": "fridge",
+        "netWeight": "48kg",
+        "product_img": "./fridge/id17.avif",
+        "discription": {
+            "Key_Features": "The new range of LG Direct Cool Refrigerators with cutting edge Smart Inverter Compressor technology that takes energy efficiency to another level and helps you save more. Not only this, it comes with 10 year warranty and provides super silent operation.",
+            "Additional_Features": "LG Door Cooling+ ™ makes inside temperature more even and cools the refrigerator 35% faster than the conventional cooling system. This reduces the temperature gap between the inner part and the door side of the compartment; thus letting the food remain fresh for long.",
+            "Feature_Programs": "The Jet Ice Technology in LG Refrigerator helps make ice in less than 90 minutes^^. The Unique Cooling Shower that maintains a continuous flow of cool air on the tray helps make ice faster than most of the refrigerators in the same product category."
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Erin Hannon",
-        rating: 5,
-        comment: "Love the fitness tracking features. Stylish and functional.",
-      },
-      {
-        user: "Jan Levinson",
-        rating: 4,
-        comment: "Great watch but wish the battery lasted longer.",
-      },
-    ],
-    stock: 50,
-    discount: 10,
-    images: ["samsung_watch1.jpg", "samsung_watch2.jpg"],
-  },
-  {
-    id: "018",
-    name: "Sony PlayStation 5 Console",
-    category: "Gaming Console",
-    brand: "Sony",
-    price: 49999,
-    description:
-      "Experience next-gen gaming with the Sony PlayStation 5. It features a powerful GPU, ultra-fast SSD, and immersive 3D audio technology for the ultimate gaming experience.",
-    specifications: {
-      processor: "AMD Ryzen Zen 2",
-      gpu: "AMD RDNA 2",
-      storage: "825GB SSD",
-      resolution: "4K",
-      refresh_rate: "120Hz",
+    {
+        "id": 18,
+        "brand": "LG",
+        "product_name": "GL-S292RDSX",
+        "product_detail": "LG 240L Convertible Double Door Refrigerator with Smart Inverter Compressor",
+        "capacity": "240L",
+        "color": {
+            "bodyColor": "High Gloss Finish",
+            "doorColor": "High Gloss Finish"
+        },
+        "size": "585 x 1475 x 703",
+        "category": "fridge",
+        "netWeight": "50kg",
+        "product_img": "./fridge/id18.jpg",
+        "discription": {
+            "Key_Features": "The new range of LG Frost Free Refrigerators with cutting edge Smart Inverter Compressor technology that takes energy efficiency to another level and helps you save more. Not only this, it comes with 10 year warranty and provides super silent operation.",
+            "Additional_Features": "Auto Smart Connect™ is a technology that helps connect your refrigerator to home inverter. Once the refrigerator is connected to the home inverter, every time the power goes off it automatically takes inverter power to run the refrigerator without any manual supervision. Consumes power less than 2 CFL~ bulbs during power cut.",
+            "Feature_Programs": "LG Refrigerators come with specialized Toughened Glass Shelves that are meant to carry heavy load without any spillage. Now store more without any worry."
+        }
     },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Michael Scott",
-        rating: 5,
-        comment:
-          "The best console ever! Graphics and performance are mind-blowing.",
-      },
-      {
-        user: "Dwight Schrute",
-        rating: 5,
-        comment: "Incredible speed and performance. A must-have for gamers.",
-      },
-    ],
-    stock: 10,
-    discount: 3,
-    images: ["ps5_1.jpg", "ps5_2.jpg"],
-  },
-  {
-    id: "019",
-    name: "LG 55 Inch OLED 4K Ultra HD Smart TV",
-    category: "Television",
-    brand: "LG",
-    price: 109999,
-    description:
-      "Discover deep blacks and vibrant colors with the LG 55-inch OLED 4K Smart TV. Equipped with Dolby Vision, it offers a cinematic experience with AI-powered sound and display technologies.",
-    specifications: {
-      resolution: "3840x2160",
-      screen_size: "55 inches",
-      smart_tv: true,
-      connectivity: ["Wi-Fi", "Bluetooth", "HDMI", "USB"],
-      refresh_rate: "120Hz",
-      audio: "40W",
-      operating_system: "WebOS",
+    {
+        "id": 19,
+        "brand": "LG",
+        "product_name": "GL-S262SESX",
+        "product_detail": "LG 246L, 3 Star, Smart Inverter Compressor, Convertible, Smart Diagnosis™, Ebony Sheen, Frost-Free Double Door Refrigerator",
+        "capacity": "246L",
+        "color": {
+            "bodyColor": "Ebony Sheen",
+            "doorColor": "Ebony Sheen"
+        },
+        "size": "555 x 1575 x 637",
+        "category": "fridge",
+        "netWeight": "57kg",
+        "product_img": "./fridge/id19.avif",
+        "discription": {
+            "Key_Features": "LG's Smart Diagnosis™ is a fast and easy way to troubleshoot issues. Simply call the LG Customer Service Helpline and place the phone on the appliance. The appliance then communicates with a computer that produces a diagnosis within seconds and provides an immediate solution.",
+            "Additional_Features": "Auto Smart Connect™ is a technology that helps connect your refrigerator to home inverter. Once the refrigerator is connected to the home inverter, every time the power goes off it automatically takes inverter power to run the refrigerator without any manual supervision. Consumes power less than 2 CFL~ bulbs during power cut.",
+            "Feature_Programs": "The Multi-Air Flow System was designed to maintain ideal temperature levels to help keep your food fresher, for longer. Digital sensors constantly monitor conditions inside the refrigerator, and vents are strategically placed throughout to surround your food with cool air to keep it at its freshest at all times."
+        }
     },
-    rating: 4.8,
-    reviews: [
-      {
-        user: "Michael Scott",
-        rating: 5,
-        comment: "Incredible display! Feels like you're in the scene.",
-      },
-      {
-        user: "Pam Beesly",
-        rating: 4,
-        comment: "Great TV but very expensive.",
-      },
-    ],
-    stock: 15,
-    discount: 5,
-    images: ["lg_oled1.jpg", "lg_oled2.jpg"],
-  },
-  {
-    id: "020",
-    name: "Sony WH-1000XM4 Noise Cancelling Headphones",
-    category: "Headphones",
-    brand: "Sony",
-    price: 29999,
-    description:
-      "Immerse yourself in music with Sony WH-1000XM4 Noise Cancelling Headphones. Industry-leading noise cancellation and smart listening technology provide a superior audio experience.",
-    specifications: {
-      type: "Over-Ear",
-      battery_life: "30 hours",
-      noise_cancellation: true,
-      connectivity: ["Bluetooth", "NFC", "Aux"],
-      microphone: true,
+    {
+        "id": 20,
+        "brand": "LG",
+        "product_name": "GL-T422VESX",
+        "product_detail": "LG 398L, 3 Star, Smart Inverter Compressor, Convertible, Wi-Fi, Door Cooling™, Ebony Sheen Finish, Frost-Free Double Door Refrigerator",
+        "capacity": "398L",
+        "color": {
+            "bodyColor": "Ebony Sheen",
+            "doorColor": "Ebony Sheen"
+        },
+        "size": "700 x 680 x 1760",
+        "category": "fridge",
+        "netWeight": "57kg",
+        "product_img": "./fridge/id20.avif",
+        "discription": {
+            "Key_Features": "LG's Smart Diagnosis™ is a fast and easy way to troubleshoot issues. Simply call the LG Customer Service Helpline and place the phone on the appliance. The appliance then communicates with a computer that produces a diagnosis within seconds and provides an immediate solution.",
+            "Additional_Features": "Auto Smart Connect™ is a technology that helps connect your refrigerator to home inverter. Once the refrigerator is connected to the home inverter, every time the power goes off it automatically takes inverter power to run the refrigerator without any manual supervision. Consumes power less than 2 CFL~ bulbs during power cut.",
+            "Feature_Programs": "The Multi-Air Flow System was designed to maintain ideal temperature levels to help keep your food fresher, for longer. Digital sensors constantly monitor conditions inside the refrigerator, and vents are strategically placed throughout to surround your food with cool air to keep it at its freshest at all times."
+        }
     },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Dwight Schrute",
-        rating: 5,
-        comment: "Perfect for complete focus in noisy environments.",
-      },
-      {
-        user: "Jim Halpert",
-        rating: 4,
-        comment: "Fantastic sound, but a bit bulky.",
-      },
-    ],
-    stock: 50,
-    discount: 12,
-    images: ["sony_headphones1.jpg", "sony_headphones2.jpg"],
-  },
-  {
-    id: "021",
-    name: "Dyson V11 Absolute Pro Cord-Free Vacuum",
-    category: "Vacuum Cleaner",
-    brand: "Dyson",
-    price: 52999,
-    description:
-      "Clean your home with the Dyson V11 Absolute Pro Cord-Free Vacuum. It provides powerful suction, an LCD screen to monitor battery life, and multiple cleaning modes for different surfaces.",
-    specifications: {
-      suction_power: "185 AW",
-      battery_life: "60 minutes",
-      filter_type: "HEPA",
-      weight: "2.97 kg",
-      warranty: "2 years",
+    {
+        "id": 21,
+        "brand": "LG",
+        "product_name": "GL-D241ABCU",
+        "product_detail": "LG 224L, 5 Star, Smart Inverter Compressor, Smart Connect, With Base Stand Drawer, Blue Charm Finish, Direct Cool Single Door Refrigerator",
+        "capacity": "224L",
+        "color": {
+            "bodyColor": "Blue Charm",
+            "doorColor": "Blue Charm"
+        },
+        "size": "584 x 1500 x 648",
+        "category": "fridge",
+        "netWeight": "40kg",
+        "product_img": "./fridge/id21.avif",
+        "discription": {
+            "Key_Features": "Unmatched performance, great savings and super silent operation; the New Smart Inverter Compressor is thoughtfully designed to provide added convenience to you.",
+            "Additional_Features": "Store vegetables at room temperature more easily. There is a large Base Stand Drawer in the refrigerator - a convenient place for food items that don't need cooling, such as potatoes, onions etc. And you won't waste kitchen space to keep extra baskets!",
+            "Feature_Programs": "The revolutionary Smart Connect technology in LG Direct Cool refrigerator helps you connect your refrigerator to home inverter in case of power cuts. Thus providing you the convenience of storing food for long, without spoilage."
+        }
     },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Stanley Hudson",
-        rating: 5,
-        comment: "Makes cleaning effortless. Love the cordless design.",
-      },
-      {
-        user: "Phyllis Vance",
-        rating: 4,
-        comment: "Powerful vacuum, but battery drains quickly on max mode.",
-      },
-    ],
-    stock: 25,
-    discount: 8,
-    images: ["dyson_vacuum1.jpg", "dyson_vacuum2.jpg"],
-  },
-  {
-    id: "022",
-    name: "Apple MacBook Pro M1 13-inch",
-    category: "Laptop",
-    brand: "Apple",
-    price: 129999,
-    description:
-      "The Apple MacBook Pro M1 features an 8-core CPU and GPU, 16GB RAM, and a 512GB SSD. It's designed for professionals seeking top performance in a sleek, lightweight form factor.",
-    specifications: {
-      processor: "Apple M1",
-      ram: "16GB",
-      storage: "512GB SSD",
-      screen_size: "13.3 inches",
-      battery_life: "20 hours",
+    {
+        "id": 22,
+        "brand": "LG",
+        "product_name": "GL-B257EES3",
+        "product_detail": "LG 650L, Convertible Side-by-Side Refrigerator with Smart Inverter Compressor, Hygiene Fresh+™, DoorCooling+™, Smart Diagnosis™, Ebony Sheen Finish",
+        "capacity": "650L",
+        "color": {
+            "bodyColor": "Ebony Sheen",
+            "doorColor": "Ebony Sheen"
+        },
+        "size": "913 x 1790 x 735",
+        "category": "fridge",
+        "netWeight": "40kg",
+        "product_img": "./fridge/id22.avif",
+        "discription": {
+            "Key_Features": "The intelligent air filter can not only remove bacteria up to 99.999%, but also minimize bad odor in the refrigerator. In addition, you can keep your food items fresher in the cleaner condition.",
+            "Additional_Features": "LG's Smart Diagnosis™ is a fast and easy way to troubleshoot issues. Simply call the LG Customer Service Helpline and place the phone on the appliance. The appliance then communicates with a computer that produces a diagnosis within seconds and provides an immediate solution",
+            "Feature_Programs": "The new range of LG Frost Free Refrigerators with cutting edge Smart Inverter Compressor technology that takes energy efficiency to another level and helps you save more. Not only this, it comes with 10 year warranty and provides super silent operation."
+        }
     },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Ryan Howard",
-        rating: 5,
-        comment: "Blazing fast performance! Perfect for video editing.",
-      },
-      {
-        user: "Kelly Kapoor",
-        rating: 4,
-        comment: "Amazing laptop but quite expensive.",
-      },
-    ],
-    stock: 30,
-    discount: 5,
-    images: ["macbook_pro1.jpg", "macbook_pro2.jpg"],
-  },
-  {
-    id: "023",
-    name: "Bose SoundLink Revolve+ Bluetooth Speaker",
-    category: "Bluetooth Speaker",
-    brand: "Bose",
-    price: 19999,
-    description:
-      "Experience true 360-degree sound with the Bose SoundLink Revolve+ Bluetooth Speaker. It delivers deep, immersive audio in a compact, portable design with up to 16 hours of battery life.",
-    specifications: {
-      battery_life: "16 hours",
-      water_resistance: "IPX4",
-      connectivity: ["Bluetooth", "Aux"],
-      weight: "0.9 kg",
+    {
+        "id": 23,
+        "brand": "LG",
+        "product_name": "GL-X257AMC3",
+        "product_detail": "LG 630L, Side-by-Side Refrigerator, InstaView, Matte Black, 3 Star",
+        "capacity": "630L",
+        "color": {
+            "bodyColor": "Matte Black PCM",
+            "doorColor": "Matte Black PCM"
+        },
+        "size": "913 x 1790 x 735",
+        "category": "fridge",
+        "netWeight": "136kg",
+        "product_img": "./fridge/id23.avif",
+        "discription": {
+            "Key_Features": "InstaView Door-in-Door™ has a sleek mirrored glass panel that illuminates with two quick knocks, allowing you to see inside the easy access compartment without ever opening the door, reducing cold air loss to help keep food fresher longer.",
+            "Additional_Features": "LG's Smart Diagnosis™ is a fast and easy way to troubleshoot issues. Simply call the LG Customer Service Helpline and place the phone on the appliance. The appliance then communicates with a computer that produces a diagnosis within seconds and provides an immediate solution",
+            "Feature_Programs": "The UV Nano feature cleans inside of the water nozzle automatically for 10 minutes every hour, or can be activated manually."
+        }
     },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Meredith Palmer",
-        rating: 5,
-        comment: "Amazing sound quality! Great for outdoor parties.",
-      },
-      {
-        user: "Creed Bratton",
-        rating: 4,
-        comment: "Solid speaker, but wish it was fully waterproof.",
-      },
-    ],
-    stock: 40,
-    discount: 10,
-    images: ["bose_speaker1.jpg", "bose_speaker2.jpg"],
-  },
-  {
-    id: "024",
-    name: "HP Pavilion Gaming Laptop",
-    category: "Laptop",
-    brand: "HP",
-    price: 79999,
-    description:
-      "The HP Pavilion Gaming Laptop features a 9th Gen Intel Core i7 processor and NVIDIA GTX 1650 for an immersive gaming experience. Perfect for both work and play.",
-    specifications: {
-      processor: "Intel Core i7",
-      ram: "16GB",
-      storage: "1TB HDD + 256GB SSD",
-      graphics: "NVIDIA GTX 1650",
-      screen_size: "15.6 inches",
-      refresh_rate: "144Hz",
+    {
+        "id": 24,
+        "brand": "IFB",
+        "product_name": "IFBDC - 2324IRG",
+        "product_detail": "IFBDC - 2324IRG Direct - Cool Refrigerator 206 L | 4 Star | Glass Door | Advance Cool Series",
+        "capacity": "206L",
+        "color": {
+            "bodyColor": "Black - Glass",
+            "doorColor": "Ripple Gold"
+        },
+        "size": "539 x 621 x 1313",
+        "category": "fridge",
+        "netWeight": "175kg",
+        "product_img": "./fridge/id24.webp",
+        "discription": {
+            "Key_Features": "Scratch Resistant : Features a sleek, modern design and a durable, scratch-resistant surface, ensuring lasting elegance and functionality in any contemporary kitchen.",
+            "Additional_Features": "Converti Cool : India's first ConvertiCool DC. Get maximum cooling in the freezer when needed or re-direct under-utilized airflow to the fridge when it's fully stocked with our ConvertCool airflow technology.",
+            "Feature_Programs": "Extra Shelf : A third shelf gives you that extra space so you no longer need to stack items on top of each other. You get improved visibility and better access to the contents of your refrigerator."
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Oscar Martinez",
-        rating: 5,
-        comment: "Handles all my games smoothly with no lag.",
-      },
-      {
-        user: "Angela Martin",
-        rating: 4,
-        comment: "Great gaming laptop but can get hot under heavy use.",
-      },
-    ],
-    stock: 35,
-    discount: 7,
-    images: ["hp_gaming_laptop1.jpg", "hp_gaming_laptop2.jpg"],
-  },
-  {
-    id: "025",
-    name: "Philips Air Fryer XXL",
-    category: "Kitchen Appliance",
-    brand: "Philips",
-    price: 18999,
-    description:
-      "Enjoy healthy, crispy meals with the Philips Air Fryer XXL. It uses hot air to fry your food with little to no oil, delivering delicious results without the guilt.",
-    specifications: {
-      capacity: "7 liters",
-      power: "2225W",
-      cooking_modes: ["Fry", "Bake", "Grill", "Roast"],
-      temperature_range: "60-200°C",
-      material: "Stainless Steel",
+    {
+        "id": 25,
+        "brand": "IFB",
+        "product_name": "IFBDC - 2325ILG",
+        "product_detail": "IFBDC - 2325ILG Direct - Cool Refrigerator 206 L | 4 Star | Glass Door | Advance Cool Series",
+        "capacity": "206L",
+        "color": {
+            "bodyColor": "Black - Glass",
+            "doorColor": "Lotus charm"
+        },
+        "size": "539 x 621 x 1313",
+        "category": "fridge",
+        "netWeight": "175kg",
+        "product_img": "./fridge/id25.webp",
+        "discription": {
+            "Key_Features": "Scratch Resistant : Features a sleek, modern design and a durable, scratch-resistant surface, ensuring lasting elegance and functionality in any contemporary kitchen.",
+            "Additional_Features": "Converti Cool : India's first ConvertiCool DC. Get maximum cooling in the freezer when needed or re-direct under-utilized airflow to the fridge when it's fully stocked with our ConvertCool airflow technology.",
+            "Feature_Programs": "Extra Shelf : A third shelf gives you that extra space so you no longer need to stack items on top of each other. You get improved visibility and better access to the contents of your refrigerator."
+        }
     },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Kevin Malone",
-        rating: 5,
-        comment: "Fries come out perfectly crispy! A must-have for foodies.",
-      },
-      {
-        user: "Andy Bernard",
-        rating: 4,
-        comment: "Great air fryer, but it takes up a lot of space.",
-      },
-    ],
-    stock: 25,
-    discount: 10,
-    images: ["philips_airfryer1.jpg", "philips_airfryer2.jpg"],
-  },
-  {
-    id: "026",
-    name: "Canon EOS 1500D DSLR Camera",
-    category: "Camera",
-    brand: "Canon",
-    price: 45999,
-    description:
-      "Capture stunning photos with the Canon EOS 1500D DSLR Camera. It features a 24.1MP APS-C CMOS sensor and DIGIC 4+ processor, making it perfect for beginners and photography enthusiasts.",
-    specifications: {
-      megapixels: "24.1MP",
-      sensor_type: "APS-C CMOS",
-      video_resolution: "Full HD",
-      connectivity: ["Wi-Fi", "NFC"],
-      battery_life: "500 shots",
+    {
+        "id": 26,
+        "brand": "IFB",
+        "product_name": "IFBDC - 2133FFG",
+        "product_detail": "IFBDC - 2133FFG Direct - Cool Refrigerator 187 L |3 Star | Glass Door | Metal - Cool Series",
+        "capacity": "187L",
+        "color": {
+            "bodyColor": "Black - Glass",
+            "doorColor": "Floral joy"
+        },
+        "size": "539 x 621 x 1208",
+        "category": "fridge",
+        "netWeight": "175kg",
+        "product_img": "./fridge/id26.webp",
+        "discription": {
+            "Key_Features": "Scratch Resistant : Features a sleek, modern design and a durable, scratch-resistant surface, ensuring lasting elegance and functionality in any contemporary kitchen.",
+            "Additional_Features": "Converti Cool : India's first ConvertiCool DC. Get maximum cooling in the freezer when needed or re-direct under-utilized airflow to the fridge when it's fully stocked with our ConvertCool airflow technology.",
+            "Feature_Programs": "Fast Ice : The metal infused ice tray forms ice cubes in less than 60 minutes, so no more waiting for that ice cold drink."
+        }
     },
-    rating: 4.4,
-    reviews: [
-      {
-        user: "Darryl Philbin",
-        rating: 5,
-        comment:
-          "Excellent camera for beginners. Easy to use and great image quality.",
-      },
-      {
-        user: "Toby Flenderson",
-        rating: 4,
-        comment: "Great camera, but Wi-Fi transfers can be slow.",
-      },
-    ],
-    stock: 40,
-    discount: 8,
-    images: ["canon_eos1.jpg", "canon_eos2.jpg"],
-  },
-  {
-    id: "027",
-    name: "Samsung Galaxy Watch 4",
-    category: "Smartwatch",
-    brand: "Samsung",
-    price: 29999,
-    description:
-      "Stay connected and track your fitness with the Samsung Galaxy Watch 4. It features a sleek design, advanced health monitoring, and integration with Samsung Galaxy devices.",
-    specifications: {
-      display_size: "1.4 inches",
-      battery_life: "40 hours",
-      water_resistance: "IP68",
-      connectivity: ["Bluetooth", "Wi-Fi", "NFC"],
-      health_monitoring: ["Heart Rate", "ECG", "Sleep Tracking"],
+    {
+        "id": 27,
+        "brand": "IFB",
+        "product_name": "IFBDC-2133FRH",
+        "product_detail": "IFBDC-2133FRH Direct Cool Refrigerator 187 L | 3 Star | Metal - Cool Series",
+        "capacity": "187L",
+        "color": {
+            "bodyColor": "Red - Flower",
+            "doorColor": "Heavenly Hibiscus Red"
+        },
+        "size": "539 x 665 x 1228",
+        "category": "fridge",
+        "netWeight": "193kg",
+        "product_img": "./fridge/id27.webp",
+        "discription": {
+            "Key_Features": "Converti Cool : India's first ConvertiCool DC. Get maximum cooling in the freezer when needed or re-direct under-utilized airflow to the fridge when it's fully stocked with our ConvertCool airflow technology.",
+            "Additional_Features": "Thick Insulation : 65 mm thick insulation retains cooling and in turn freshness for longer. It also improves energy efficiency by reducing the workload on the compressor.",
+            "Feature_Programs": "Fast Ice : The metal infused ice tray forms ice cubes in less than 60 minutes, so no more waiting for that ice cold drink."
+        }
     },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Erin Hannon",
-        rating: 5,
-        comment: "Love the fitness tracking features. Stylish and functional.",
-      },
-      {
-        user: "Jan Levinson",
-        rating: 4,
-        comment: "Great watch but wish the battery lasted longer.",
-      },
-    ],
-    stock: 50,
-    discount: 10,
-    images: ["samsung_watch1.jpg", "samsung_watch2.jpg"],
-  },
-  {
-    id: "028",
-    name: "Sony PlayStation 5 Console",
-    category: "Gaming Console",
-    brand: "Sony",
-    price: 49999,
-    description:
-      "Experience next-gen gaming with the Sony PlayStation 5. It features a powerful GPU, ultra-fast SSD, and immersive 3D audio technology for the ultimate gaming experience.",
-    specifications: {
-      processor: "AMD Ryzen Zen 2",
-      gpu: "AMD RDNA 2",
-      storage: "825GB SSD",
-      resolution: "4K",
-      refresh_rate: "120Hz",
+    {
+        "id": 28,
+        "brand": "IFB",
+        "product_name": "IFBFF-2902FBB",
+        "product_detail": "IFBFF-2902FBB Frost Free Refrigerator 243 L | 2 Star | Surround - Cool Series",
+        "capacity": "243L",
+        "color": {
+            "bodyColor": "Blue - Flower",
+            "doorColor": "Midnight Bloom Blue"
+        },
+        "size": "594 x 670 x 1544",
+        "category": "fridge",
+        "netWeight": "260kg",
+        "product_img": "./fridge/id28.webp",
+        "discription": {
+            "Key_Features": "Surround Cool : Cools every corner of the refrigerator. Keeps the contents of your refrigerator perfectly cool, optimally fresh, and well preserved.",
+            "Additional_Features": "Smart Light Deodoriser : Smart light deodorizer keeps your refrigerator free from unpleasant odors and smelling fresh.",
+            "Feature_Programs": "Extra Width : Best in segment width means you have more room to comfortably organize the contents of your refrigerator without having to shuffle and sort."
+        }
     },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Michael Scott",
-        rating: 5,
-        comment:
-          "The best console ever! Graphics and performance are mind-blowing.",
-      },
-      {
-        user: "Dwight Schrute",
-        rating: 5,
-        comment: "Incredible speed and performance. A must-have for gamers.",
-      },
-    ],
-    stock: 10,
-    discount: 3,
-    images: ["ps5_1.jpg", "ps5_2.jpg"],
-  },
-  {
-    id: "029",
-    name: "Breville Barista Express Espresso Machine",
-    category: "Coffee Maker",
-    brand: "Breville",
-    price: 74999,
-    description:
-      "Enjoy barista-quality espresso at home with the Breville Barista Express. It features a built-in conical burr grinder, steam wand, and adjustable settings for a customized coffee experience.",
-    specifications: {
-      type: "Espresso Machine",
-      grinder: "Built-in Conical Burr",
-      pressure: "15 Bar",
-      water_tank_capacity: "2 liters",
-      steam_wand: true,
+    {
+        "id": 29,
+        "brand": "IFB",
+        "product_name": "IFBFF-2902IRG",
+        "product_detail": "IFBFF-2902IRG Frost - Free Refrigerator 243 L | 2 Star | Glass Door | Eco - Cool Series",
+        "capacity": "243L",
+        "color": {
+            "bodyColor": "Black - Glass",
+            "doorColor": "Ripple Gold"
+        },
+        "size": "594 x 670 x 1544",
+        "category": "fridge",
+        "netWeight": "260kg",
+        "product_img": "./fridge/id29.webp",
+        "discription": {
+            "Key_Features": "Scratch Resistant : Features a sleek, modern design and a durable, scratch-resistant surface, ensuring lasting elegance and functionality in any contemporary kitchen.",
+            "Additional_Features": "Surround Cool : Cools every corner of the refrigerator. Keeps the contents of your refrigerator perfectly cool, optimally fresh, and well preserved.",
+            "Feature_Programs": "XL Bottle Bin : Cool larger bottles and more of them with our XL Bottle Bin. Fits 3 x 2.25 L large bottles."
+        }
     },
-    rating: 4.8,
-    reviews: [
-      {
-        user: "Alice Johnson",
-        rating: 5,
-        comment:
-          "Makes perfect espresso and lattes every time. Worth the investment!",
-      },
-      {
-        user: "Bob Williams",
-        rating: 4,
-        comment: "Great machine, but the cleaning process is a bit involved.",
-      },
-    ],
-    stock: 20,
-    discount: 5,
-    images: ["breville_espresso1.jpg", "breville_espresso2.jpg"],
-  },
-  {
-    id: "030",
-    name: "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
-    category: "Pressure Cooker",
-    brand: "Instant Pot",
-    price: 12999,
-    description:
-      "The Instant Pot Duo 7-in-1 is a versatile kitchen appliance that combines a pressure cooker, slow cooker, rice cooker, steamer, sauté pan, and more. Perfect for quick and easy meal preparation.",
-    specifications: {
-      functions: [
-        "Pressure Cooker",
-        "Slow Cooker",
-        "Rice Cooker",
-        "Steamer",
-        "Sauté Pan",
-        "Warmer",
-      ],
-      capacity: "6 liters",
-      power: "1000W",
-      programmable: true,
-      display: "LCD",
-    },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Sarah Miller",
-        rating: 5,
-        comment:
-          "Extremely versatile and easy to use. A must-have for busy cooks.",
-      },
-      {
-        user: "James Brown",
-        rating: 4,
-        comment: "Great appliance but a bit bulky for small kitchens.",
-      },
-    ],
-    stock: 50,
-    discount: 10,
-    images: ["instant_pot1.jpg", "instant_pot2.jpg"],
-  },
-  {
-    id: "031",
-    name: "Philips HD9650/96 Airfryer XXL",
-    category: "Air Fryer",
-    brand: "Philips",
-    price: 19999,
-    description:
-      "The Philips Airfryer XXL uses rapid air technology to fry food with little to no oil. It features a large capacity and multiple cooking modes for healthy and delicious meals.",
-    specifications: {
-      capacity: "1.4 kg",
-      power: "2225W",
-      cooking_modes: ["Fry", "Grill", "Bake", "Roast"],
-      temperature_range: "60-200°C",
-      removable_basket: true,
-    },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Emma Davis",
-        rating: 5,
-        comment:
-          "Perfect for healthy cooking. The food comes out crispy and delicious.",
-      },
-      {
-        user: "Oliver Wilson",
-        rating: 4,
-        comment: "Good air fryer but takes up a lot of counter space.",
-      },
-    ],
-    stock: 30,
-    discount: 15,
-    images: ["philips_airfryer_xxl1.jpg", "philips_airfryer_xxl2.jpg"],
-  },
-  {
-    id: "032",
-    name: "Ninja Foodi 8-in-1 Deluxe XL Pressure Cooker",
-    category: "Pressure Cooker",
-    brand: "Ninja",
-    price: 14999,
-    description:
-      "The Ninja Foodi 8-in-1 Deluxe XL offers functions like pressure cooking, air frying, baking, and more. It features a large capacity and a user-friendly control panel.",
-    specifications: {
-      functions: [
-        "Pressure Cooker",
-        "Air Fryer",
-        "Baker",
-        "Roaster",
-        "Sauté Pan",
-        "Slow Cooker",
-        "Steamer",
-        "Warmer",
-      ],
-      capacity: "8 liters",
-      power: "1400W",
-      display: "Digital LCD",
-      accessories: ["Cook & Crisp Basket", "Multi-Layer Rack"],
-    },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Michael Johnson",
-        rating: 5,
-        comment:
-          "Incredible versatility and ease of use. Perfect for large families.",
-      },
-      {
-        user: "Ava Lee",
-        rating: 4,
-        comment: "Great for cooking, but the manual is a bit confusing.",
-      },
-    ],
-    stock: 25,
-    discount: 10,
-    images: ["ninja_foodi1.jpg", "ninja_foodi2.jpg"],
-  },
-  {
-    id: "033",
-    name: "KitchenAid Artisan Stand Mixer",
-    category: "Stand Mixer",
-    brand: "KitchenAid",
-    price: 29999,
-    description:
-      "The KitchenAid Artisan Stand Mixer is perfect for baking enthusiasts. It features a powerful motor, 10 speed settings, and a large mixing bowl for all your baking needs.",
-    specifications: {
-      motor_power: "325W",
-      bowl_capacity: "4.8 liters",
-      speed_settings: "10",
-      attachments_included: ["Flat Beater", "Wire Whip", "Dough Hook"],
-      material: "Metal",
-    },
-    rating: 4.8,
-    reviews: [
-      {
-        user: "Sophia Adams",
-        rating: 5,
-        comment: "An essential for any serious baker. Reliable and durable.",
-      },
-      {
-        user: "Ethan Clark",
-        rating: 4,
-        comment: "Great mixer, but quite heavy and takes up space.",
-      },
-    ],
-    stock: 15,
-    discount: 5,
-    images: ["kitchenaid_mixer1.jpg", "kitchenaid_mixer2.jpg"],
-  },
-  {
-    id: "034",
-    name: "Samsung 28 L Convection Microwave Oven",
-    category: "Microwave Oven",
-    brand: "Samsung",
-    price: 14999,
-    description:
-      "The Samsung 28 L Convection Microwave Oven offers versatile cooking options with convection, grill, and microwave modes. It features a sleek design and auto-cook presets for convenience.",
-    specifications: {
-      capacity: "28 liters",
-      power_levels: "5",
-      cooking_modes: ["Microwave", "Convection", "Grill"],
-      auto_cook_presets: true,
-      defrost_function: true,
-    },
-    rating: 4.6,
-    reviews: [
-      {
-        user: "Charlotte Wright",
-        rating: 5,
-        comment: "Highly versatile with excellent cooking performance.",
-      },
-      {
-        user: "Benjamin Harris",
-        rating: 4,
-        comment: "Good microwave but the display is hard to read.",
-      },
-    ],
-    stock: 20,
-    discount: 10,
-    images: ["samsung_microwave1.jpg", "samsung_microwave2.jpg"],
-  },
-  {
-    id: "035",
-    name: "Tefal Ultimate Anti-Scale Steam Iron",
-    category: "Iron",
-    brand: "Tefal",
-    price: 8999,
-    description:
-      "The Tefal Ultimate Anti-Scale Steam Iron provides powerful steam performance with a durable ceramic soleplate and anti-scale technology to prevent build-up.",
-    specifications: {
-      steam_output: "50g/min",
-      power: "2800W",
-      water_tank_capacity: "300 ml",
-      self_cleaning: true,
-      soleplate_material: "Ceramic",
-    },
-    rating: 4.5,
-    reviews: [
-      {
-        user: "Amelia Brown",
-        rating: 5,
-        comment:
-          "Excellent steam power and easy to use. Cuts down ironing time significantly.",
-      },
-      {
-        user: "Lucas Martinez",
-        rating: 4,
-        comment: "Good performance, but the cord could be longer.",
-      },
-    ],
-    stock: 40,
-    discount: 15,
-    images: ["tefal_iron1.jpg", "tefal_iron2.jpg"],
-  },
-  {
-    id: "036",
-    name: "Breville the Smart Oven Air Fryer",
-    category: "Toaster Oven",
-    brand: "Breville",
-    price: 29999,
-    description:
-      "The Breville Smart Oven Air Fryer offers versatile cooking with 13 different functions, including air frying, roasting, and baking. It features a spacious interior and smart technology for even cooking.",
-    specifications: {
-      functions: [
-        "Air Fry",
-        "Bake",
-        "Roast",
-        "Broil",
-        "Toast",
-        "Bagel",
-        "Reheat",
-        "Warm",
-      ],
-      capacity: "32 liters",
-      power: "1800W",
-      display: "LCD",
-      "auto-eject tray": true,
-    },
-    rating: 4.7,
-    reviews: [
-      {
-        user: "Olivia White",
-        rating: 5,
-        comment:
-          "Fantastic oven with so many functions. Air frying is a game changer!",
-      },
-      {
-        user: "Liam Robinson",
-        rating: 4,
-        comment: "Great appliance, but a bit noisy during operation.",
-      },
-    ],
-    stock: 10,
-    discount: 10,
-    images: ["breville_oven1.jpg", "breville_oven2.jpg"],
-  },
-  {
-    id: "037",
-    name: "Dyson V11 Absolute Cordless Vacuum Cleaner",
-    category: "Vacuum Cleaner",
-    brand: "Dyson",
-    price: 49999,
-    description:
-      "The Dyson V11 Absolute Cordless Vacuum Cleaner delivers powerful suction and up to 60 minutes of run time. It features intelligent cleaning modes and a high-torque cleaner head for deep cleaning.",
-    specifications: {
-      suction_power: "185 AW",
-      battery_life: "60 minutes",
-      cleaning_modes: ["Auto", "Eco", "Boost"],
-      filter: "HEPA",
-      weight: "2.9 kg",
-    },
-    rating: 4.9,
-    reviews: [
-      {
-        user: "Sophia Martin",
-        rating: 5,
-        comment:
-          "Incredible suction power and easy to maneuver. Worth every penny!",
-      },
-      {
-        user: "Jacob Turner",
-        rating: 4,
-        comment: "Great performance, but a bit expensive.",
-      },
-    ],
-    stock: 15,
-    discount: 8,
-    images: ["dyson_vacuum1.jpg", "dyson_vacuum2.jpg"],
-  },
-];
+    {
+        "id": 30,
+        "brand": "IFB",
+        "product_name": "IFBDC-2774IRV",
+        "product_detail": "IFBDC-2774IRV Direct Cool Refrigerator 251 L | 4 Star | Advance - Cool Series",
+        "capacity": "251L",
+        "color": {
+            "bodyColor": "Red - Flower",
+            "doorColor": "Sweet Valentine Red"
+        },
+        "size": "585 x 705 x 1540",
+        "category": "fridge",
+        "netWeight": "257kg",
+        "product_img": "./fridge/id30.webp",
+        "discription": {
+            "Key_Features": "Converti Cool : India's first ConvertiCool DC. Get maximum cooling in the freezer when needed or re-direct under-utilized airflow to the fridge when it's fully stocked with our ConvertCool airflow technology.",
+            "Additional_Features": "Fast Ice : The metal infused ice tray forms ice cubes in less than 60 minutes, so no more waiting for that ice cold drink.",
+            "Feature_Programs": "Advanced Inverter Compressor : Advanced Invertor Technology delivers optimal cooling performance as well as savings due to its energy efficiency"
+        }
+    }
+]
