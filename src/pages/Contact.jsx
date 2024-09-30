@@ -96,7 +96,7 @@ function Contact() {
         </div>
       </div>
       <div className="w-[10%] md:w-[20%] bg-black relative">
-        <div className="bg-[#ffb277] top-[20%] right-[50%] w-[300px] hidden md:flex flex-col px-3 py-6 absolute">
+        <div className="bg-[#ffb277] rounded-lg top-[20%] right-[50%] w-[300px] hidden md:flex flex-col pr-3 pl-6 py-6 absolute">
           <h1 className="text-2xl font-medium">Contact detail</h1>
           <p className="w-full">
             Lorem ipsum dolor sit amet lmf gye adipisicing elit. Accusamus,
@@ -117,7 +117,7 @@ function Contact() {
             </li>
             <li className="flex text-lg items-center gap-2">
               <IoMdCall size={"24px"} />
-              <span>8797594743</span>
+              <span>8709159857</span>
             </li>
           </ul>
         </div>
@@ -145,7 +145,7 @@ function Contact() {
             </li>
             <li className="flex text-lg items-center gap-2">
               <IoMdCall size={"24px"} />
-              <span>8797594743</span>
+              <span>8709159857</span>
             </li>
           </ul>
       </div>

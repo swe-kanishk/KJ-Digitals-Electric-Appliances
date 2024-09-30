@@ -53,11 +53,11 @@ function Products() {
   }, []);
 
   const searchProductsHandler = (searchItem) => {
-    console.log(searchItem)
-    // const allSearchProducts = productData.filter((item) => 
-    //   item.category.toLowerCase().includes(searchItem.toLowerCase())
-    // );
-    // setProducts(allSearchProducts); // Set filtered products
+    const allSearchProducts = productData.filter((item) => {
+      const newItem = JSON.stringify(item)
+      return newItem.toLowerCase().includes(searchItem.toLowerCase())
+  });
+    setProducts(allSearchProducts); // Set filtered products
   };
 
   function onSubmit(e) {
@@ -118,7 +118,8 @@ function Products() {
               type="text"
               value={searchProducts}
               onChange={(e) => {
-                searchProductsHandler(...prev, e.target.value);
+                setSearchProducts(e.target.value);
+                searchProductsHandler(e.target.value);
               }}
             />
             <button className="px-2">
@@ -128,7 +129,7 @@ function Products() {
         </div>
 
         <div className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center">
-          <div className={`bg-white text-black overflow-hidden fixed top-[60vh] h-[15rem] text-white overflow-y-scroll right-[2rem] ${open ? 'flex' : 'hidden'} rounded-lg font-medium`}>
+          <div className={`bg-white text-black overflow-hidden fixed top-[75vh] right-[2rem] ${open ? 'flex' : 'hidden'} rounded-lg font-medium`}>
             <ul className="flex flex-col gap-[1px]">
               <li onClick={() => { setProducts(productData); setIsOpen(!open); }} className="hover:bg-violet-500 bg-violet-600 w-full px-3 py-2">All Products</li>
               {Object.keys(categorizedProducts).map((category) => (

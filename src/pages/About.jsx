@@ -45,17 +45,17 @@ function About() {
                 <li>Customer satisfaction is our top priority. We strive to exceed expectations with every product and service we offer.</li>
 
                 <li>Quality products and exceptional service - that's what we stand for. Thank you for being a part of the KJ Digital family.</li>
-                <footer className='text-end'>- KJ Digitals Team</footer>
+                <footer className='text-end mt-5'>- KJ Digitals Team</footer>
             </ul>
         </section>
         <div className='w-full mx-6 py-4'>
         <Reviews />
         </div>
         
-        <section className='bg-[#8BC53E] text-start flex px-5 pt-4'>
-          <div className='w-1/2 flex justify-center flex-col'>
-          <h3 className='text-center text-4xl py-3 mx-auto w-2/3 font-semibold'>Our Commitment to Excellence</h3>
-            <p className='w-2/3 text-center mx-auto'>At KJ Digital, we believe in innovation, quality, and customer satisfaction. Our team is dedicated to providing you with the best electronic appliances that cater to your needs. Explore our collection and experience the difference.</p>
+        <section className='bg-[#8BC53E] text-start flex-col lg:flex-row flex px-5 pt-4'>
+          <div className='w-full flex justify-center flex-col'>
+          <h3 className='text-center text-2xl md:text-4xl py-3 mx-auto w-full font-semibold'>Our Commitment to Excellence</h3>
+            <p className='w-full lg:w-2/3 text-center text-[14px] md:text-[16px] mx-auto'>At KJ Digital, we believe in innovation, quality, and customer satisfaction. Our team is dedicated to providing you with the best electronic appliances that cater to your needs. Explore our collection and experience the difference.</p>
             
           </div>
             <img src="https://i.pinimg.com/564x/40/c7/2a/40c72ad8e064827ed303e5c20508372c.jpg" className='mx-auto w-[300px]' alt="Creative Image" />
