@@ -64,13 +64,14 @@ function Footer() {
         </div>
         <div className="flex md:flex-row flex-col w-full gap-3">
           <ul className="grid grid-cols-2 gap-3 text-black w-full md:w-[750px]">
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'><FaWhatsapp size={'22px'} /></span> 8797594743</li>
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'><IoMdCall size={'22px'} /></span> 8709159857</li>
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'><MdEventAvailable size={'22px'} /></span> 10:00AM - 10:00PM</li>
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'><MdPrivacyTip size={'22px'} /></span> Privacy & Prolicy</li>
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'>GST NO.</span> 10ELLPK2267P1ZQ</li>
-            <li className='flex items-center justify-start gap-2 font-medium text-red-500'><span className='text-black'><ImLocation2 size={'22px'} /></span> simri bakhtiyarpur, saharsa, 852127, bihar</li>
+            <li className='flex items-center justify-start gap-2 font-medium'><span className='text-black'><FaWhatsapp size={'22px'} /></span> 8797594743</li>
+            <li className='flex items-center justify-start gap-2 font-medium'><span className='text-black'><IoMdCall size={'22px'} /></span> 8709159857</li>
+            <li className='flex items-center justify-start gap-2 font-medium'><span className='text-black'><MdEventAvailable size={'22px'} /></span> 10:00AM - 10:00PM</li>
+            <li className='flex items-center justify-start gap-2 font-medium'><span className='text-black'><MdPrivacyTip size={'22px'} /></span> Privacy & Prolicy</li>
+          <li className='lg:flex items-center justify-start hidden gap-2 font-medium'><span className='text-black'><ImLocation2 size={'22px'} /></span> simri bakhtiyarpur, saharsa, 852127, bihar</li>
           </ul>
+          <li className='flex items-center justify-start lg:hidden gap-2 font-medium'><span className='text-black'><ImLocation2 size={'22px'} /></span> simri bakhtiyarpur, saharsa, 852127, bihar</li>
+
           <div className="flex flex-1 items-start md:items-center justify-start flex-col text-black">
             <div className="flex flex-col gap-3">
               <h1 className='font-medium mt-3 md:my-0'>Enter your gmail and submit, we will be back to you soon!</h1>
@@ -92,6 +93,8 @@ function Footer() {
           </div>
         </div>
         <div className="my-4">
+        <li className='flex my-3 items-center justify-start gap-2 text-blue-700 font-medium'><span className='text-red-600'>GST NO.</span> 10ELLPK2267P1ZQ</li>
+
           <h1 className="text-black">You can also contact us here!</h1>
           <div className="text-black flex items-center gap-6 mt-3">
             <Link to="https://www.facebook.com/profile.php?id=61565158797039" className='hover:text-[#3e4ee0]'><FaFacebook size={"26px"} /></Link>

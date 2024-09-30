@@ -12,11 +12,10 @@ function ProductCard({ product, setFormOpen, setBuyingProduct, formOpen }) {
           className="w-2/3 rounded-3xl"
           alt=""
         />
-        <div className="flex justify-between px-2 items-center w-full py-1 absolute top-0 left-0">
-          <span className="bg-black p-2 rounded-full aspect-square font-medium text-sm text-white">
+        <div className="flex justify-between px-2 items-center w-full absolute top-0 left-0">
+          <span className="bg-black p-2 rounded-md aspect-square font-medium text-sm text-white">
             {product.brand}
           </span>
-
           <div className="aspect-square rounded-full bg-black text-white p-1">
             <MdMoreHoriz size={"24px"} />
           </div>
@@ -24,6 +23,8 @@ function ProductCard({ product, setFormOpen, setBuyingProduct, formOpen }) {
       </div>
       <div className="w-[95%] py-1 mx-auto">
         <h1>{product.product_name}</h1>
+        <p>{product.id}</p>
+
         <span className="text-gray-400 text-sm">{product.product_detail}</span>
         <div className="flex justify-between items-center my-2 pt-2">
           <button></button>
