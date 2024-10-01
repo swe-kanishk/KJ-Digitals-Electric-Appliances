@@ -40,7 +40,7 @@ function Navbar() {
   });
   return (
     <>
-      <nav className="flex items-center justify-between z-30 border-b border-gray-300 fixed top-0 left-0 w-full bg-white lg:px-6 px-3 py-2">
+      <nav className="flex items-center justify-between z-30 border-b border-gray-300 fixed top-0 mx-auto max-w-[1600px] w-full bg-white lg:px-6 px-3 py-2">
         <Link to="/" className="flex items-center gap-12">
           <div className="flex items-center gap-2 font-medium text-xl">
             <img
@@ -96,7 +96,7 @@ function Navbar() {
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
-              `bg-white text-md gap-3 flex items-center justify-center text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
+              `bg-white text-md gap-3 flex items-center justify-center text-black hover:text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
                 isActive ? "activeon" : ""
               }`
             }
@@ -108,9 +108,7 @@ function Navbar() {
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
-              `bg-white text-md gap-3 flex items-center justify-center text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
-                isActive ? "activeon" : ""
-              }`
+              `bg-white text-md gap-3 flex items-center justify-center text-black hover:text-black hover:bg-gray-200 rounded-lg px-3 py-2 `
             }
             to="/products"
           >
@@ -120,7 +118,7 @@ function Navbar() {
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
-              `bg-white text-md gap-3 flex items-center justify-center text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
+              `bg-white text-md gap-3 flex items-center justify-center text-black hover:text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
                 isActive ? "activeon" : ""
               }`
             }
@@ -132,7 +130,7 @@ function Navbar() {
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
-              `bg-white text-md gap-3 flex items-center justify-center text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
+              `bg-white text-md gap-3 flex items-center justify-center text-black hover:text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
                 isActive ? "activeon" : ""
               }`
             }
@@ -144,7 +142,7 @@ function Navbar() {
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
-              `bg-white text-md gap-3 flex items-center justify-center text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
+              `bg-white text-md gap-3 flex items-center justify-center text-black hover:text-black hover:bg-gray-200 rounded-lg px-3 py-2 ${
                 isActive ? "activeon" : ""
               }`
             }

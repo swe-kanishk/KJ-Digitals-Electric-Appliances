@@ -5,7 +5,7 @@ import TrustedCompanies from '../components/TrustedCompanies'
 function About() {
   return (
     <div className='min-h-[55vh] w-full flex flex-col items-center justify-center'>
-        <section className='bg-white pt-8 w-full flex flex-col gap-2 text-center'>
+        {/* <section className='bg-white pt-8 w-full flex flex-col gap-2 text-center'>
             <h2 className='text-4xl font-semibold w-fit mx-auto bg-purple-800 text-white py-2 rounded-lg px-3'>Welcome to KJ Digitals</h2>
             <p className='bg-black text-white font-medium w-[80%] mx-auto rounded-lg py-2'>At KJ Digital, we are dedicated to bringing you the best in electronic appliances...</p>
         </section>
@@ -19,23 +19,23 @@ function About() {
                 <li>Instagram: <a href="https://www.instagram.com/kjdigitals2024" target="_blank">kj digitals2024</a></li>
                 <li>Address: Near Shiv Mandir, Main Road, Simri Bakhtiyarpur, Saharsa, 852127, Bihar, India</li>
             </ul>
-        </section>
+        </section> */}
           <section className='bg-[#E2E2E2] w-full'>
-            <div className='flex items-center justify-evenly w-full mt-3'>
-            <h3 className='text-start my-2 ml-8 text-4xl font-semibold'>Unleash Excellence with Our Top-Tier Brands!</h3>
+            <div className='flex items-center flex-col md:flex-row justify-evenly w-full mt-3'>
+            <h3 className='text-start my-2 ml-8 text-2xl md:text-4xl font-semibold'>Unleash Excellence with Our Top-Tier Brands!</h3>
             <img className="mx-auto h-[200px]" src="https://i.pinimg.com/564x/61/1d/4d/611d4dc95d8dcb8ef811cedda10fe33b.jpg" alt="" />
             </div>
 
-            <ul className='grid grid-cols-3 bg-black place-content-center py-12 place-items-center'>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/46/7c/fb/467cfb0511b1e9f1bc1208956b01e5a7.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/aa/10/f8/aa10f8828e606a1d7525fa4a59dc93dd.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/ca/47/db/ca47db4373b6463ce9cf1bbf312a9963.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/17/01/d9/1701d9f16e77f47a727e84c93984bd82.jpg" className='w-[500px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/d6/03/00/d6030076e7947f2fa8803af48e652bbd.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/bb/08/0e/bb080e4e0f6588240fdb0f5e1b57d2ca.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/66/aa/fa/66aafaa25fffe78c6b01dd175a91cee7.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
-                <li className='mx-8 my-4'><img src="https://i.pinimg.com/564x/ef/8a/e5/ef8ae5b2a53c6d3be9e281d99241d635.jpg" className='w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-gradient-to-r from-neutral-300 to-stone-400 place-content-center py-12 place-items-center'>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/46/7c/fb/467cfb0511b1e9f1bc1208956b01e5a7.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/aa/10/f8/aa10f8828e606a1d7525fa4a59dc93dd.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/ca/47/db/ca47db4373b6463ce9cf1bbf312a9963.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/17/01/d9/1701d9f16e77f47a727e84c93984bd82.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/d6/03/00/d6030076e7947f2fa8803af48e652bbd.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/bb/08/0e/bb080e4e0f6588240fdb0f5e1b57d2ca.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/66/aa/fa/66aafaa25fffe78c6b01dd175a91cee7.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
+                <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/ef/8a/e5/ef8ae5b2a53c6d3be9e281d99241d635.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
             </ul>
         </section>
         

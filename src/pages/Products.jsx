@@ -20,7 +20,7 @@ function Products() {
   const [categorizedProducts, setCategorizedProducts] = useState({});
   const [buyingProduct, setBuyingProduct] = useState(null);
   const [success, setSuccess] = useState(false);
-  const [searchProducts, setSearchProducts] = useState('');
+  const [searchProducts, setSearchProducts] = useState("");
   const [email, setEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [error, setError] = useState(""); // Added error state
@@ -54,9 +54,9 @@ function Products() {
 
   const searchProductsHandler = (searchItem) => {
     const allSearchProducts = productData.filter((item) => {
-      const newItem = JSON.stringify(item)
-      return newItem.toLowerCase().includes(searchItem.toLowerCase())
-  });
+      const newItem = JSON.stringify(item);
+      return newItem.toLowerCase().includes(searchItem.toLowerCase());
+    });
     setProducts(allSearchProducts); // Set filtered products
   };
 
@@ -71,7 +71,13 @@ function Products() {
       body: JSON.stringify({
         name: customerName,
         email,
-        buyingProduct: JSON.stringify(buyingProduct), // Directly using buyingProduct
+        buyingProduct: JSON.stringify({
+          productId: buyingProduct.id,
+          brand: buyingProduct.brand,
+          product_name: buyingProduct.product_name,
+          product_detail: buyingProduct.product_detail,
+          category: buyingProduct.category,
+        }),
       }),
     })
       .then((response) => response.json())
@@ -109,9 +115,12 @@ function Products() {
             <p>Search for available products</p>
           </div>
           <div className="flex px-2 items-center py-2 border border-black rounded-lg">
-            <NavLink className="px-2 border border-black rounded font-light" to={`/products/`}>
-              Art
-            </NavLink>
+            <div
+              className="px-2 border border-black rounded font-light"
+              to={`/products/`}
+            >
+              find
+            </div>
             <input
               placeholder="search available items"
               className="outline-none ml-2 px-2"
@@ -129,30 +138,72 @@ function Products() {
         </div>
 
         <div className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center">
-          <div className={`bg-white text-black overflow-hidden fixed top-[75vh] right-[2rem] ${open ? 'flex' : 'hidden'} rounded-lg font-medium`}>
+          <div
+            className={`bg-white text-black overflow-hidden shadow-md shadow-gray-500 h-[200px] overflow-y-scroll fixed top-[64vh] right-[3rem] ${
+              open ? "flex" : "hidden"
+            } rounded-lg font-medium`}
+          >
             <ul className="flex flex-col gap-[1px]">
-              <li onClick={() => { setProducts(productData); setIsOpen(!open); }} className="hover:bg-violet-500 bg-violet-600 w-full px-3 py-2">All Products</li>
+              <li
+                onClick={() => {
+                  setProducts(productData);
+                  setIsOpen(!open);
+                }}
+                className="hover:bg-gray-800 bg-black text-white w-full px-3 py-2"
+              >
+                All Products
+              </li>
               {Object.keys(categorizedProducts).map((category) => (
-                <li key={category} onClick={() => { setProducts(categorizedProducts[category]); setIsOpen(!open); }} className="hover:bg-violet-500 bg-violet-600 w-full px-3 py-2">{category}</li>
+                <li
+                  key={category}
+                  onClick={() => {
+                    setProducts(categorizedProducts[category]);
+                    setIsOpen(!open);
+                  }}
+                  className="hover:bg-gray-800 bg-black text-white w-full px-3 py-2"
+                >
+                  {category}
+                </li>
               ))}
             </ul>
           </div>
-          <FaFilter size={'22px'} onClick={() => setIsOpen(!open)} className="relative top-1" />
+          <FaFilter
+            size={"22px"}
+            onClick={() => setIsOpen(!open)}
+            className="relative top-1"
+          />
         </div>
 
         <div className="xl:grid xl:grid-cols-4 gap-8 flex justify-center flex-wrap px-6">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} setBuyingProduct={setBuyingProduct} setFormOpen={setFormOpen} formOpen={formOpen} />
-          ))}
+          {products.map((product, index) => {
+            const isOdd = index % 2 !== 0; // Calculate whether the index is odd
+            return (
+              <ProductCard
+                key={product.id}
+                product={product}
+                setBuyingProduct={setBuyingProduct}
+                setFormOpen={setFormOpen}
+                formOpen={formOpen}
+                isOdd={isOdd}
+              />
+            );
+          })}
         </div>
 
-        <form onSubmit={onSubmit} className={`${formOpen ? 'flex' : 'hidden'} bg-white px-3 fixed items-center justify-center inset-0`}>
+        <form
+          onSubmit={onSubmit}
+          className={`${
+            formOpen ? "flex" : "hidden"
+          } bg-white px-3 fixed items-center justify-center inset-0`}
+        >
           <div className="flex h-fit md:h-[500px] pt-8 flex-1 border-black rounded-lg border">
             <div className="w-full flex-1 mx-auto px-6 py-3 flex flex-col justify-center">
               <h1 className="text-3xl font-medium">Contact us</h1>
               <p className="text-gray-500">
-                <span className="hidden lg:inline">Feel free to contact us any time!</span>
-                {" "} we will get back to you as soon as we can!
+                <span className="hidden lg:inline">
+                  Feel free to contact us any time!
+                </span>{" "}
+                we will get back to you as soon as we can!
               </p>
               <div className="flex flex-col gap-4 py-6">
                 <input

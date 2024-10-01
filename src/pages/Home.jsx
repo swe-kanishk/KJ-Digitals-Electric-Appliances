@@ -148,7 +148,7 @@ function Home() {
 
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Products!</h1>
-        <div className="bg-gray-300 flex w-full animated-cards">
+        <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
             title={"Daikin Ac"}
             subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
