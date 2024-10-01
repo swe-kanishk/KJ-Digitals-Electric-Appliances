@@ -53,7 +53,7 @@ function Footer() {
       success ? <Success /> : ''
     }
     <footer className='border-t bg-white z-10 border-gray-300'>
-      <div className="flex flex-col justify-between gap-4 py-6 px-6 bg-white">
+      <div className="flex flex-col justify-between gap-4 py-6 px-6 bg-gradient-to-r from-neutral-100 to-stone-300">
         <div className="flex items-center gap-2 lg:py-8 font-medium text-xl">
           <img
             src={logoimage}
