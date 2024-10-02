@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import MainLayout from "./components/MainLayout";
 import Contact from "./pages/Contact";
@@ -15,6 +15,7 @@ function App() {
         { path: "/products", element: <Products /> },
         { path: "/about", element: <About /> },
         { path: "/contact", element: <Contact /> },
+        { path: "*", element: <Navigate to="/" /> },
       ],
     },
   ]);
