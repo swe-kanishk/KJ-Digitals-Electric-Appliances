@@ -205,7 +205,7 @@ function Products() {
                 </span>{" "}
                 we will get back to you as soon as we can!
               </p>
-              <div className="flex flex-col gap-4 py-6">
+              <div className="flex flex-col gap-4 px-3 py-6">
                 <input
                   type="text"
                   value={customerName}
