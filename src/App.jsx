@@ -10,38 +10,15 @@ function App() {
     {
       path: "/",
       element: <MainLayout />,
-      children: [{
-        path: "/",
-        element: <Home />,
-      }],
-    },
-    {
-      path: "/",
-      element: <MainLayout />,
-      children: [{
-        path: "/products",
-      element: <Products />,
-
-      }],
-    },
-    {
-      path: "/",
-      element: <MainLayout />,
-      children: [{
-        path: "/about",
-      element: <About />,
-
-      }],
-    },
-    {
-      path: "/",
-      element: <MainLayout />,
-      children: [{
-        path: "/contact",
-      element: <Contact />,
-      }],
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/products", element: <Products /> },
+        { path: "/about", element: <About /> },
+        { path: "/contact", element: <Contact /> },
+      ],
     },
   ]);
+
   return <RouterProvider router={browserRouter} />;
 }
 
