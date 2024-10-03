@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { MdMoreHoriz } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
+import ProductDetailCard from "./ProductDetailCard";
 
 function ProductCard({ product, setFormOpen, isOdd, setBuyingProduct, formOpen }) {
+  const [openDetails, setOpenDetails] = useState(false)
   return (
     // bg-[#ffc08c]
     <div className={`rounded-3xl  bg-gradient-to-r ${isOdd ? 'bg-gradient-to-r from-stone-500 to-stone-700' : 'bg-gradient-to-r from-stone-500 to-stone-700'} overflow-hidden max-w-[400px] flex flex-col p-2 gap-3 text-white justify-between w-full`}>
@@ -29,10 +31,11 @@ function ProductCard({ product, setFormOpen, isOdd, setBuyingProduct, formOpen }
         <div className="flex justify-between items-center my-2 pt-2">
           <button
             className="bg-white text-black py-2 px-3 rounded-md text-sm font-medium"
-            onClick={() => {setFormOpen(!formOpen), setBuyingProduct(product)}}
+            onClick={() => setOpenDetails(true)}
           >
             Details...
           </button>
+          <ProductDetailCard setBuyingProduct={setBuyingProduct} formOpen={formOpen} setFormOpen={setFormOpen} product={product} openDetails={openDetails} setOpenDetails={setOpenDetails} />
           <button
             className="bg-white text-black py-2 px-3 rounded-md text-sm font-medium"
             onClick={() => {setFormOpen(!formOpen), setBuyingProduct(product)}}
