@@ -109,7 +109,7 @@ function Products() {
       >
         <div className="circle border border-black bg-transparent h-[1rem] w-[1rem]"></div>
 
-        <div className="flex items-center px-2 flex-col gap-8">
+        <div className="flex items-center px-3 flex-col gap-8">
           <div className="flex flex-col items-center gap-2">
             <h1 className="animated-heading text-3xl">POPULAR PRO STOCKS</h1>
             <p>Search for available products</p>
@@ -123,7 +123,7 @@ function Products() {
             </div>
             <input
               placeholder="search available items"
-              className="outline-none ml-2 px-2"
+              className="outline-none mx-2 px-2"
               type="text"
               value={searchProducts}
               onChange={(e) => {
