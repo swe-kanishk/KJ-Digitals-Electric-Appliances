@@ -114,7 +114,7 @@ function Products() {
             <h1 className="animated-heading text-3xl">POPULAR PRO STOCKS</h1>
             <p>Search for available products</p>
           </div>
-          <div className="flex px-2 items-center py-2 border border-black rounded-lg">
+          <div className="flex px-2 max-w-[300px] items-center py-2 border border-black rounded-lg">
             <div
               className="px-2 border border-black rounded font-light"
               to={`/products/`}
@@ -139,9 +139,9 @@ function Products() {
 
         <div className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center">
           <div
-            className={`bg-white text-black overflow-hidden shadow-md shadow-gray-500 h-[200px] overflow-y-scroll fixed top-[64vh] right-[3rem] ${
+            className={`bg-white text-black overflow-hidden shadow-md shadow-gray-500 h-[200px] overflow-y-scroll fixed top-[65px] right-[0rem] ${
               open ? "flex" : "hidden"
-            } rounded-lg font-medium`}
+            } rounded-l-lg font-medium`}
           >
             <ul className="flex flex-col gap-[1px]">
               <li
