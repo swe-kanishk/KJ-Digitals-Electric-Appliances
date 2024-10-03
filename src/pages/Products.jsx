@@ -114,7 +114,7 @@ function Products() {
             <h1 className="animated-heading text-3xl">POPULAR PRO STOCKS</h1>
             <p>Search for available products</p>
           </div>
-          <div className="flex px-2 max-w-[300px] items-center py-2 border border-black rounded-lg">
+          <div className="flex px-2 max-w-[320px] lg:w-auto overflow-hidden items-center py-2 border border-black rounded-lg">
             <div
               className="px-2 border border-black rounded font-light"
               to={`/products/`}
