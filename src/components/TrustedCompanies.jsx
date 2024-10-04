@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TrustedCompanies = () => {
   const containerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver(
@@ -98,7 +98,7 @@ const TrustedCompanies = () => {
     //   ref={containerRef}
     //   className={` w-auto flex gap-8 border-none py-6`}
     // >
-    <div className="flex gap-8 py-2 animate-scroll">
+    <div className="flex gap-8 py-2 overflow-x-scroll">
     {trustedComapies.concat(trustedComapies).map((company, index) => (
       <img
         key={index}

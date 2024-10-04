@@ -113,6 +113,7 @@ function Products() {
                 setSearchProducts(e.target.value);
                 searchProductsHandler(e.target.value);
               }}
+              autoFocus
             />
             <button className="px-2">
               <IoSearch size={"22px"} />

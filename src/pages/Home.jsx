@@ -23,7 +23,11 @@ gsap.registerPlugin(ScrollTrigger);
 function Home() {
   return (
     <>
-      <marquee behavior="scroll" direction="left" className="py-3 text-white bg-[#6c25df]">
+      <marquee
+        behavior="scroll"
+        direction="left"
+        className="py-3 text-white bg-[#6c25df]"
+      >
         <div className="flex items-center">
           <span>
             KJ Digitals : near shiv mandir, main road, simri bakhtiyarpur,
@@ -64,7 +68,8 @@ function Home() {
               to="/products"
               className="bg-red-500 mx-auto lg:mx-0 xl:self-start w-fit hover:bg-red-600 text-white py-2 px-4 font-medium rounded-lg flex items-center gap-2"
             >
-              See all available products <FaArrowCircleRight className="animate-arrow" size={"20px"} />
+              See all available products{" "}
+              <FaArrowCircleRight className="animate-arrow" size={"20px"} />
             </Link>
           </div>
           <div className="flex lg:gap-3 items-end w-full xl:flex-1 h-full lg:pr-6 justify-between">
@@ -107,31 +112,31 @@ function Home() {
               </Link> */}
             </div>
             <div className="relative w-fit lg:hidden flex justify-end">
-            <img
-              src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
-              className="absolute max-w-[300px] hidden md:flex h-[250px] z-10 rounded-xl bottom-0 right-[70%]  border-4 border-white"
-              alt=""
-            />
-            <img
-              className="rounded-xl lg:w-auto relative left-[1rem] w-full"
-              src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg"
-              alt=""
-            />
-          </div>
+              <img
+                src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
+                className="absolute max-w-[300px] hidden md:flex h-[250px] z-10 rounded-xl bottom-0 right-[70%]  border-4 border-white"
+                alt=""
+              />
+              <img
+                className="rounded-xl lg:w-auto relative left-[1rem] w-full"
+                src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-          <div className="relative hidden lg:flex justify-end">
-            <img
-              src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
-              className="absolute max-h-[400px] lg:h-[400px] z-10 rounded-xl bottom-0 right-[40%] lg:right-[70%] border-4 border-white"
-              alt=""
-            />
-            <img
-              className="rounded-xl lg:w-auto relative left-[1rem] w-1/2"
-              src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg"
-              alt=""
-            />
-          </div>
+        <div className="relative hidden lg:flex justify-end">
+          <img
+            src="https://i.pinimg.com/564x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
+            className="absolute max-h-[400px] lg:h-[400px] z-10 rounded-xl bottom-0 right-[40%] lg:right-[70%] border-4 border-white"
+            alt=""
+          />
+          <img
+            className="rounded-xl lg:w-auto relative left-[1rem] w-1/2"
+            src="https://i.pinimg.com/564x/e7/91/58/e79158085645e47113f4488b8807c3e3.jpg"
+            alt=""
+          />
+        </div>
       </section>
 
       <section className="lg:bg-[#151515] lg:py-4 flex flex-col gap-3">
@@ -151,7 +156,9 @@ function Home() {
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
             title={"Summer Appliances"}
-            subtitle={"Stay Cool All Year Round – Powerful ACs for Ultimate Comfort!."}
+            subtitle={
+              "Stay Cool All Year Round – Powerful ACs for Ultimate Comfort!."
+            }
             image="https://i.pinimg.com/736x/5b/51/af/5b51af33306d4eb1c2fee0ec58c308d2.jpg"
           />
           <Card
@@ -166,16 +173,19 @@ function Home() {
             subtitle={
               "Effortless Laundry Days – Washing Machines that Do the Hard Work for You!"
             }
-            image="https://i.pinimg.com/736x/f7/dd/4c/f7dd4c81c591889ec5dcde51fb5dc56a.jpg" />
+            image="https://i.pinimg.com/736x/f7/dd/4c/f7dd4c81c591889ec5dcde51fb5dc56a.jpg"
+          />
           <Card
             title={"Entertainment Appliances"}
-            subtitle={"Experience Entertainment Like Never Before – Stunning TVs for a Cinematic Viewing"}
+            subtitle={
+              "Experience Entertainment Like Never Before – Stunning TVs for a Cinematic Viewing"
+            }
             image="https://i.pinimg.com/736x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
           />
         </div>
       </section>
       <section className="py-4 px-3 flex flex-col gap-3">
-        <h1 className="text-2xl font-medium">Our Top Products!</h1>
+        <h1 className="text-2xl font-medium">Our Top Home Appliances!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
             title={"Daikin Ac"}
@@ -203,7 +213,65 @@ function Home() {
           />
         </div>
       </section>
+      <section className="py-4 px-3 flex flex-col gap-3">
+        <h1 className="text-2xl font-medium">Our Top Smart-Watches!</h1>
+        <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
+          <Card
+            title={"Daikin Ac"}
+            subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
+            image="https://i.pinimg.com/564x/6e/b7/3e/6eb73ed0ec31e26dd728c24fe5083c71.jpg"
+          />
+          <Card
+            title={"Lazer Grinder"}
+            subtitle={
+              "Effortless Blending and Mixing with Our Top-Quality Mixers."
+            }
+            image="https://i.pinimg.com/564x/4e/a8/50/4ea8507ae664e6201ef80df4351f4b76.jpg"
+          />
+          <Card
+            title={"Washing Machine"}
+            subtitle={
+              "Revolutionize Laundry Day with Our Efficient Washing Machines."
+            }
+            image="https://i.pinimg.com/736x/3b/31/7a/3b317af8a879bdd90abf12bff20f071a.jpg"
+          />
+          <Card
+            title={"JBL Speaker"}
+            subtitle={"Immerse Yourself in Sound with Our Premium Speakers."}
+            image="https://i.pinimg.com/736x/c8/14/c6/c814c67deccd9b6f4203ebc7dc5a9d57.jpg"
+          />
+        </div>
+      </section>
+      <section className="py-4 px-3 flex flex-col gap-3">
+        <h1 className="text-2xl font-medium">Our Top SmartPhones!</h1>
+        <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
+          <Card
+            title={"Daikin Ac"}
+            subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
+            image="https://i.pinimg.com/564x/59/fc/7b/59fc7b9945ee7d8f8b75d5977ccb97ad.jpg"
+          />
+          <Card
+            title={"Washing Machine"}
+            subtitle={
+              "Revolutionize Laundry Day with Our Efficient Washing Machines."
+            }
+            image="https://i.pinimg.com/564x/36/05/90/3605903215abeed730cac12cc7385b22.jpg"
+          />
+          <Card
+            title={"Lazer Grinder"}
+            subtitle={
+              "Effortless Blending and Mixing with Our Top-Quality Mixers."
+            }
+            image="https://i.pinimg.com/736x/fc/4d/64/fc4d644c639a30a46aad2d820b72e5b2.jpg"
+          />
 
+          <Card
+            title={"JBL Speaker"}
+            subtitle={"Immerse Yourself in Sound with Our Premium Speakers."}
+            image="https://i.pinimg.com/564x/eb/5f/9f/eb5f9f5e41040a7f32431a642ae361ce.jpg"
+          />
+        </div>
+      </section>
     </>
   );
 }

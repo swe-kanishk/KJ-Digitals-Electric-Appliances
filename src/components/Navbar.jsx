@@ -48,7 +48,7 @@ function Navbar() {
               alt="Logo"
               className="h-12 w-12 rounded-full object-cover object-center"
             />
-            <span className="text-2xl">Digitals</span>
+            {/* <span className="text-2xl">Digitals</span> */}
           </div>
         </Link>
         <ul className="lg:flex items-center font-medium gap-12 hidden">
