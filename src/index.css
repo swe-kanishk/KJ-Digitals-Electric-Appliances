@@ -5,8 +5,11 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  
 }
-
+*::-webkit-scrollbar { 
+  display: none;  /* Chrome, Safari, and Opera */
+}
 .active {
   background-color: rgb(20, 19, 19);
   padding: 8px 16px;

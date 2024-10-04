@@ -86,7 +86,7 @@ function Navbar() {
           )}
         </div>
       </nav>
-      <div className="h-[65px]"></div>
+      <div className="h-[75px]"></div>
       <div
         className={`h-screen bg-white transition-transform overflow-hidden duration-500 ${
           open ? "translate-x-0 ease-out" : "-translate-x-full ease-in"
