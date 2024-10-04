@@ -150,26 +150,26 @@ function Home() {
         <h1 className="text-2xl font-medium">Our Top Categories!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
-            title={"Home Appliances"}
-            subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
+            title={"Summer Appliances"}
+            subtitle={"Stay Cool All Year Round – Powerful ACs for Ultimate Comfort!."}
             image="https://i.pinimg.com/736x/5b/51/af/5b51af33306d4eb1c2fee0ec58c308d2.jpg"
           />
           <Card
             title={"Kitchen Appliances"}
             subtitle={
-              "Effortless Blending and Mixing with Our Top-Quality Mixers."
+              "Cook with Precision – Modern Ovens for Perfect Meals Every Time!."
             }
             image="https://i.pinimg.com/736x/00/20/c5/0020c563c92f77ed35eb2661bb732ed0.jpg"
           />
           <Card
             title={"Laundry Appliances"}
             subtitle={
-              "Revolutionize Laundry Day with Our Efficient Washing Machines."
+              "Effortless Laundry Days – Washing Machines that Do the Hard Work for You!"
             }
             image="https://i.pinimg.com/736x/f7/dd/4c/f7dd4c81c591889ec5dcde51fb5dc56a.jpg" />
           <Card
             title={"Entertainment Appliances"}
-            subtitle={"Immerse Yourself in Sound with Our Premium Speakers."}
+            subtitle={"Experience Entertainment Like Never Before – Stunning TVs for a Cinematic Viewing"}
             image="https://i.pinimg.com/736x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
           />
         </div>
