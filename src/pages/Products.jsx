@@ -13,7 +13,6 @@ import Success from "../components/Success.jsx";
 gsap.registerPlugin(ScrollTrigger);
 
 function Products() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [open, setIsOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const [products, setProducts] = useState(productData);
@@ -24,20 +23,6 @@ function Products() {
   const [email, setEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [error, setError] = useState(""); // Added error state
-
-  const handleMouseMove = (event) => {
-    setMousePosition({
-      x: event.clientX,
-      y: event.clientY,
-    });
-  };
-
-  useGSAP(() => {
-    gsap.to(".circle", {
-      x: mousePosition.x - 20,
-      y: mousePosition.y - 105,
-    });
-  }, [mousePosition]);
 
   // Categorize products by category
   useEffect(() => {
@@ -104,10 +89,8 @@ function Products() {
     <>
       {success && <Success />}
       <div
-        onMouseMove={handleMouseMove}
         className="w-full bg-white flex flex-col pt-[5vh] lg:pt-[10vh] xl:pt-[20vh] gap-20 pb-6 items-center justify-center relative"
       >
-        <div className="circle border border-black bg-transparent h-[1rem] w-[1rem]"></div>
 
         <div className="flex items-center px-3 flex-col gap-8">
           <div className="flex flex-col items-center gap-2">

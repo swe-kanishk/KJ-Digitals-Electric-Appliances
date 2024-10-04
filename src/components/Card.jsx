@@ -11,7 +11,6 @@ function Card({image, title, subtitle}) {
         <p className='font-medium'>{title}</p>
         <h1 className='text-sm text-blue-600'>{subtitle}</h1>
         </div>
-        <span>from 250rs off!</span>
       </div>
       
     </div>

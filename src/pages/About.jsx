@@ -20,13 +20,22 @@ function About() {
                 <li>Address: Near Shiv Mandir, Main Road, Simri Bakhtiyarpur, Saharsa, 852127, Bihar, India</li>
             </ul>
         </section> */}
+        <section className='bg-pink-600 text-white flex flex-col gap-3 pt-12 pb-6 px-8 w-full'>
+            <h3 className='text-2xl font-medium bg-white w-fit py-1 px-3 text-black rounded-md'>Customer Satisfaction</h3>
+            <ul>
+                <li>Customer satisfaction is our top priority. We strive to exceed expectations with every product and service we offer.</li>
+
+                <li>Quality products and exceptional service - that's what we stand for. Thank you for being a part of the KJ Digital family.</li>
+                <footer className='text-end mt-5'>- KJ Digitals Team</footer>
+            </ul>
+        </section>
           <section className='bg-[#E2E2E2] w-full'>
             <div className='flex items-center flex-col md:flex-row justify-evenly w-full mt-3'>
             <h3 className='text-start my-2 ml-8 text-2xl md:text-4xl font-semibold'>Unleash Excellence with Our Top-Tier Brands!</h3>
             <img className="mx-auto h-[200px]" src="https://i.pinimg.com/564x/61/1d/4d/611d4dc95d8dcb8ef811cedda10fe33b.jpg" alt="" />
             </div>
 
-            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-gradient-to-r from-neutral-300 to-stone-400 place-content-center py-12 place-items-center'>
+            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white place-content-center py-12 place-items-center'>
                 <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/55/91/6b/55916b71df8acb4b97e6eef80a195e20.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
                 <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/46/7c/fb/467cfb0511b1e9f1bc1208956b01e5a7.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
                 <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/aa/10/f8/aa10f8828e606a1d7525fa4a59dc93dd.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
@@ -38,19 +47,6 @@ function About() {
                 <li className='mx-8 border border-black rounded-lg overflow-hidden my-4'><img src="https://i.pinimg.com/564x/ef/8a/e5/ef8ae5b2a53c6d3be9e281d99241d635.jpg" className='max-w-[500px] min-w-[300px] rounded-lg h-[100px] object-cover' alt="" /></li>
             </ul>
         </section>
-        
-        <section className='bg-pink-600 text-white flex flex-col gap-3 pt-12 pb-6 px-8 w-full'>
-            <h3 className='text-2xl font-medium bg-white w-fit py-1 px-3 text-black rounded-md'>Customer Satisfaction</h3>
-            <ul>
-                <li>Customer satisfaction is our top priority. We strive to exceed expectations with every product and service we offer.</li>
-
-                <li>Quality products and exceptional service - that's what we stand for. Thank you for being a part of the KJ Digital family.</li>
-                <footer className='text-end mt-5'>- KJ Digitals Team</footer>
-            </ul>
-        </section>
-        <div className='w-full mx-6 py-4'>
-        <Reviews />
-        </div>
         
         <section className='bg-[#8BC53E] text-start flex-col lg:flex-row flex px-5 pt-4'>
           <div className='w-full flex justify-center flex-col'>
