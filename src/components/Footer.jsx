@@ -119,7 +119,7 @@ function Footer() {
                     type="submit"
                     className="py-[0.35rem] px-3 border bg-black text-white rounded-r border-white"
                   >
-                    sumbit
+                    submit
                   </button>
                 </form>
               </div>

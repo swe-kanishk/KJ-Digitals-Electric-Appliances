@@ -117,7 +117,7 @@ function Home() {
         <div className="flex xl:flex-wrap xl:justify-center justify-between pt-[6%] pb-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-6 xl:w-1/2">
           <div className="text-center lg:text-start mx-auto px-3 flex flex-col gap-6">
             <h1 className="md:text-[2rem] text-center lg:text-start text-[1.2rem] sm:text-[1.5rem] font-semibold">
-              Welcome to KJ Digitals– Where Innovation Meets Trust!
+              Welcome to <span className="py-1 px-3 bg-[#ed4447] rounded-lg  text-white">KJ Digitals</span> {" "} – Where Innovation Meets Trust!
               <br /> Explore the Latest in Electronics with Unbeatable Quality
               and Genuine Customer Satisfaction!
             </h1>
@@ -211,9 +211,9 @@ function Home() {
         <h1 className="text-2xl font-medium">Our Top Home Appliances!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
-            title={"Daikin Ac"}
+            title={"Airconditioner"}
             subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
-            image="https://i.pinimg.com/564x/c3/3c/b1/c33cb130124c81f5402e640850e897ba.jpg"
+            image="https://i.pinimg.com/564x/1c/74/6a/1c746aab8e8f5e4a6e4d0a1345924351.jpg"
           />
           <Card
             title={"Lazer Grinder"}
@@ -227,7 +227,7 @@ function Home() {
             subtitle={
               "Revolutionize Laundry Day with Our Efficient Washing Machines."
             }
-            image="https://i.pinimg.com/474x/d3/e4/f7/d3e4f75d8a4c274a07f6565b27bc7830.jpg"
+            image="https://i.pinimg.com/564x/03/c5/0c/03c50c5fbdfb7cfd0f5371c380176bd4.jpg"
           />
           <Card
             title={"JBL Speaker"}
@@ -236,7 +236,8 @@ function Home() {
           />
         </div>
       </section>
-      <section className="py-4 px-3 flex bg-[#ffab77] flex-col gap-3">
+
+      <section className="py-4 px-3 flex bg-gradient-to-bl from-lime-400 via-emerald-500 to-green-600 flex-col gap-3">
         <h1 className="text-xl md:text-2xl font-medium">
           Explore Products From Each Categories!
         </h1>
@@ -264,6 +265,7 @@ function Home() {
           ))}
         </ul>
       </section>
+      
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Smart-Watches!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">

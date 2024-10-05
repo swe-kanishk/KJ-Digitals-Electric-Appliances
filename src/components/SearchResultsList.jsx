@@ -14,7 +14,7 @@ export const SearchResultsList = ({ products, searchProductsHandler, searchProdu
     })
   }
   return (
-    <ul className={`${clicked ? 'hidden' : 'flex'} results-list absolute py-2 px-3 z-50 gap-1 max-h-[300px] overflow-y-scroll w-full top-[2rem] left-0 bg-[#ffb68b]`}>
+    <ul className={`${clicked ? 'hidden' : 'flex'} results-list absolute py-2 px-3 z-50 gap-1 max-h-[300px] overflow-y-scroll w-full top-[2rem] left-0 bg-stone-300`}>
       {uniqueCategories.map((category, index) => (
         <li key={index} onClick={() => {searchProductsHandler(category), setClicked(handleSetClick()), setSearchProducts(category)}} className="category-item font-medium py-1 rounded-lg px-2 hover:bg-white">
           {category}
