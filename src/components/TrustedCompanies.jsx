@@ -8,24 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TrustedCompanies = () => {
   const containerRef = useRef(null);
-  // const [isVisible, setIsVisible] = useState(false);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       setIsVisible(entry.isIntersecting);
-  //     },
-  //     { threshold: 0.1 }
-  //   );
-
-  //   if (containerRef.current) {
-  //     observer.observe(containerRef.current);
-  //   }
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
 
   const trustedComapies = [
     {
@@ -82,7 +64,7 @@ const TrustedCompanies = () => {
     
   ];
   return (
-    <div className="flex gap-8 py-2 overflow-x-scroll">
+    <div className="flex gap-8 py-2 animate-scroll">
     {trustedComapies.concat(trustedComapies).map((company, index) => (
       <img
         key={index}

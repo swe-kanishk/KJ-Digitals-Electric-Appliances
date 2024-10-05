@@ -7,7 +7,7 @@ import "../../src/components/testimonial.css";
 import TrustedCompanies from "../components/TrustedCompanies";
 import Reviews from "../components/Reviews";
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import kitchen from "../../public/pngwing.com (1).png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VideoAdd from "../components/VideoAdd";
@@ -16,7 +16,7 @@ import "swiper/swiper-bundle.css";
 import refrigerator from "../../public/Comp 1.mp4";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { productData } from "../data/products.js";
 import { GiWashingMachine } from "react-icons/gi";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
@@ -26,41 +26,46 @@ import { GiChimney } from "react-icons/gi";
 import { FaTv } from "react-icons/fa";
 import tableFan from '../../public/home.png'
 import ceilingFan from '../../public/ceiling.png'
+import { CategoriesContext } from "../components/MainLayout.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const [categorizedProducts, setCategorizedProducts] = useState({});
+  const { selectedCategories, setSelectedCategories } = useContext(CategoriesContext);
 
+  console.log(selectedCategories)
+
+  const navigate = useNavigate()
   const setIcon = (category) => {
     switch (category) {
       case "washing_machine":
-        return <GiWashingMachine size={'50px'} />;
+        return <GiWashingMachine size={'60px'} />;
 
       case "fridge":
-        return <CgSmartHomeRefrigerator size={'50px'} />;
+        return <CgSmartHomeRefrigerator size={'60px'} />;
 
       case "Ac":
-        return <TbAirConditioning size={'50px'} />;
+        return <TbAirConditioning size={'60px'} />;
 
       case "Microwave":
-        return <TbMicrowaveFilled size={'50px'} />;
+        return <TbMicrowaveFilled size={'60px'} />;
 
       case "Chimney":
-        return <GiChimney size={'50px'} />;
+        return <GiChimney size={'60px'} />;
 
       case "ceilling-fan":
         return (
-          <img className="h-[50px] opacity-60" src={ceilingFan} alt="ceiling fan" />
+          <img className="h-[60px] opacity-60" src={ceilingFan} alt="ceiling fan" />
         
         );
 
       case "television":
-        return <FaTv size={'50px'} />;
+        return <FaTv size={'60px'} />;
 
       case "table-fan":
         return (
-          <img className="h-[50px] opacity-60" src={tableFan} alt="table fan" />
+          <img className="h-[60px] opacity-60" src={tableFan} alt="table fan" />
         );
     }
   };
@@ -232,21 +237,21 @@ function Home() {
         </div>
       </section>
       <section className="py-4 px-3 flex bg-[#ffab77] flex-col gap-3">
-        <h1 className="text-2xl font-medium">
+        <h1 className="text-xl md:text-2xl font-medium">
           Explore Products From Each Categories!
         </h1>
-        <ul className="flex items-center justify-center rounded-lg overflow-x-scroll w-full">
+        <ul className="flex items-center justify-start rounded-lg px-3 bg-black overflow-x-scroll w-full">
           {Object.keys(categorizedProducts).map((category) => (
             <li
               key={category}
               onClick={() => {
-                setProducts(categorizedProducts[category]);
-                setIsOpen(!open);
+                setSelectedCategories(category)
+                navigate('/products')
               }}
-              className="bg-black flex items-center justify-start lg:justify-center min-w-fit text-white w-full px-3 py-4"
+              className="bg-black flex  items-center justify-start lg:justify-center text-white w-full px-3 py-4"
             >
-              <div  className="bg-white hover:scale-110 duration-300 min-w-fit flex-1 cursor-pointer text-gray-500 gap-8 px-3 py-2 flex flex-col items-between justify-center rounded-lg">
-                <span className="flex items-center w-full justify-center font-medium">
+              <div  className="bg-white hover:scale-105 duration-300 min-w-[200px] flex-1 w-full cursor-pointer text-gray-500 gap-8 px-3 py-2 flex flex-col items-between justify-center rounded-lg">
+                <span className="flex items-center w-full justify-center text-lg font-medium">
                   {category}
                 </span>
                 <span className="w-full flex items-center justify-center">

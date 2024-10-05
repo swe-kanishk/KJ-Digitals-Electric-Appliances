@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { IoSearch } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { FaFilter } from "react-icons/fa";
@@ -10,10 +10,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CategoryCard from "../components/CategoryCard.jsx";
 import Success from "../components/Success.jsx";
 import { SearchResultsList } from "../components/SearchResultsList.jsx";
+import { CategoriesContext } from "../components/MainLayout.jsx";
+import { GiWashingMachine } from "react-icons/gi";
+import { CgSmartHomeRefrigerator } from "react-icons/cg";
+import { TbAirConditioning } from "react-icons/tb";
+import { TbMicrowaveFilled } from "react-icons/tb";
+import { GiChimney } from "react-icons/gi";
+import { FaTv } from "react-icons/fa";
+import tableFan from '../../public/home.png'
+import ceilingFan from '../../public/ceiling.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Products() {
+  const { selectedCategories, setSelectedCategories } = useContext(CategoriesContext);
+
   const [open, setIsOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const [products, setProducts] = useState(productData);
@@ -24,6 +35,39 @@ function Products() {
   const [email, setEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [error, setError] = useState("");
+
+  const setIcon = (category) => {
+    switch (category) {
+      case "washing_machine":
+        return <GiWashingMachine size={'20px'} />;
+
+      case "fridge":
+        return <CgSmartHomeRefrigerator size={'20px'} />;
+
+      case "Ac":
+        return <TbAirConditioning size={'20px'} />;
+
+      case "Microwave":
+        return <TbMicrowaveFilled size={'20px'} />;
+
+      case "Chimney":
+        return <GiChimney size={'20px'} />;
+
+      case "ceilling-fan":
+        return (
+          <img className="h-[20px] opacity-60" src={ceilingFan} alt="ceiling fan" />
+        
+        );
+
+      case "television":
+        return <FaTv size={'20px'} />;
+
+      case "table-fan":
+        return (
+          <img className="h-[20px] opacity-60" src={tableFan} alt="table fan" />
+        );
+    }
+  };
 
   // Categorize products by category
   useEffect(() => {
@@ -37,6 +81,17 @@ function Products() {
     });
     setCategorizedProducts(categories);
   }, []);
+
+  if(selectedCategories) {
+    useEffect(() => {
+      const selectedProductsCategory = productData.filter((product) => {
+        return (
+          product.category.toLowerCase() === selectedCategories.toLowerCase()
+        );
+      });
+      setProducts(selectedProductsCategory);
+    }, [selectedCategories]);
+  }
 
   const searchProductsHandler = (searchItem) => {
     const allSearchProducts = productData.filter((item) => {
@@ -89,13 +144,13 @@ function Products() {
   return (
     <>
       {success && <Success />}
-      <div className="w-full bg-white flex flex-col pt-[5vh] lg:pt-[10vh] xl:pt-[20vh] gap-20 pb-6 items-center justify-center relative">
-      <div
-          className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md shadow-gray-500 w-full left-0 text-center absolute top-0 hover:text-white overflow-y-scroll ${
+      <div className={`w-full bg-white flex flex-col gap-20 pb-6 items-center justify-center relative ${open ? '' : 'pt-[5vh]'}`}>
+        <div
+          className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md shadow-gray-500 w-full text-center  hover:text-white overflow-y-scroll ${
             open ? "flex" : "hidden"
           } rounded-l-lg font-medium`}
         >
-          <ul className="flex w-full overflow-x-scroll gap-4">
+          <ul className="flex w-full items-center justify-evenly pb-2 overflow-x-scroll gap-4">
             {Object.keys(categorizedProducts).map((category) => (
               <li
                 key={category}
@@ -103,9 +158,10 @@ function Products() {
                   setProducts(categorizedProducts[category]);
                   setIsOpen(!open);
                 }}
-                className="hover:bg-gray-800 bg-gray-200 rounded-lg hover:text-white text-gray-500 w-full px-3 py-2"
+                className="hover:bg-gray-800 bg-gray-200 rounded-lg flex gap-2 items-center hover:text-white text-gray-500 min-w-fit px-3 py-2"
               >
-                {category}
+                <div>{setIcon(category)}</div>
+                <span>{category}</span>
               </li>
             ))}
           </ul>
@@ -150,7 +206,7 @@ function Products() {
             </div>
           </div>
         </div>
-                
+
         <div
           onClick={() => setIsOpen(!open)}
           className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center"
@@ -161,7 +217,7 @@ function Products() {
             className="relative top-1"
           />
         </div>
-        
+
         <div className="xl:grid xl:grid-cols-4 gap-8 flex justify-center flex-wrap px-6">
           {products.map((product, index) => {
             const isOdd = index % 2 !== 0; // Calculate whether the index is odd
