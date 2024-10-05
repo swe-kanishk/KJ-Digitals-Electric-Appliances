@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logoimage from "/kj logo.jpeg";
+import logoimage from "/kj logo.png";
 import { IoSearch } from "react-icons/io5";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -43,11 +43,13 @@ function Navbar() {
       <nav className="flex items-center justify-between z-30 border-b border-gray-300 fixed top-0 mx-auto max-w-[1600px] w-full bg-white lg:px-6 px-3 py-2">
         <Link to="/" className="flex items-center gap-12">
           <div className="flex items-center gap-2 font-medium text-xl">
+            <div className="rounded-full aspect-square p-[1px] bg-black">
             <img
               src={logoimage}
               alt="Logo"
               className="h-12 w-12 rounded-full object-cover object-center"
             />
+            </div>
             <span className="text-2xl">Digitals</span>
           </div>
         </Link>
