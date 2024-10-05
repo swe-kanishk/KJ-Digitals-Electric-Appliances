@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CategoryCard from "../components/CategoryCard.jsx";
 import Success from "../components/Success.jsx";
+import { SearchResultsList } from "../components/SearchResultsList.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +23,7 @@ function Products() {
   const [searchProducts, setSearchProducts] = useState("");
   const [email, setEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
-  const [error, setError] = useState(""); // Added error state
+  const [error, setError] = useState("");
 
   // Categorize products by category
   useEffect(() => {
@@ -42,7 +43,7 @@ function Products() {
       const newItem = JSON.stringify(item);
       return newItem.toLowerCase().includes(searchItem.toLowerCase());
     });
-    setProducts(allSearchProducts); // Set filtered products
+    setProducts(allSearchProducts);
   };
 
   function onSubmit(e) {
@@ -88,76 +89,79 @@ function Products() {
   return (
     <>
       {success && <Success />}
+      <div className="w-full bg-white flex flex-col pt-[5vh] lg:pt-[10vh] xl:pt-[20vh] gap-20 pb-6 items-center justify-center relative">
       <div
-        className="w-full bg-white flex flex-col pt-[5vh] lg:pt-[10vh] xl:pt-[20vh] gap-20 pb-6 items-center justify-center relative"
-      >
-
+          className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md shadow-gray-500 w-full left-0 text-center absolute top-0 hover:text-white overflow-y-scroll ${
+            open ? "flex" : "hidden"
+          } rounded-l-lg font-medium`}
+        >
+          <ul className="flex w-full overflow-x-scroll gap-4">
+            {Object.keys(categorizedProducts).map((category) => (
+              <li
+                key={category}
+                onClick={() => {
+                  setProducts(categorizedProducts[category]);
+                  setIsOpen(!open);
+                }}
+                className="hover:bg-gray-800 bg-gray-200 rounded-lg hover:text-white text-gray-500 w-full px-3 py-2"
+              >
+                {category}
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="flex items-center px-3 flex-col gap-8">
           <div className="flex flex-col items-center gap-2">
             <h1 className="animated-heading text-3xl">POPULAR PRO STOCKS</h1>
             <p>Search for available products</p>
           </div>
-          <div className="flex px-2 max-w-[320px] lg:w-auto overflow-hidden items-center py-2 border border-black rounded-lg">
-            <div
-              className="px-2 border border-black rounded font-light"
-              to={`/products/`}
-            >
-              find
+          <div className="relative">
+            <div className="flex px-2 max-w-[320px] lg:w-auto overflow-hidden items-center py-2 border border-black rounded-lg">
+              <div
+                className="px-2 border border-black rounded font-light"
+                to={`/products/`}
+              >
+                find
+              </div>
+              <div className="search-bar-container">
+                <input
+                  placeholder="search available items"
+                  className="outline-none mx-2 px-2"
+                  type="text"
+                  value={searchProducts}
+                  onChange={(e) => {
+                    setSearchProducts(e.target.value);
+                    searchProductsHandler(e.target.value);
+                  }}
+                  autoFocus
+                />
+                {searchProducts && (
+                  <SearchResultsList
+                    products={products}
+                    setSearchProducts={setSearchProducts}
+                    searchProductsHandler={searchProductsHandler}
+                    searchProducts={searchProducts}
+                  />
+                )}
+              </div>
+              <button className="px-2">
+                <IoSearch size={"22px"} />
+              </button>
             </div>
-            <input
-              placeholder="search available items"
-              className="outline-none mx-2 px-2"
-              type="text"
-              value={searchProducts}
-              onChange={(e) => {
-                setSearchProducts(e.target.value);
-                searchProductsHandler(e.target.value);
-              }}
-              autoFocus
-            />
-            <button className="px-2">
-              <IoSearch size={"22px"} />
-            </button>
           </div>
         </div>
-
-        <div className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center">
-          <div
-            className={`bg-white text-black overflow-hidden shadow-md shadow-gray-500 h-[200px] overflow-y-scroll fixed top-[65px] right-[0rem] ${
-              open ? "flex" : "hidden"
-            } rounded-l-lg font-medium`}
-          >
-            <ul className="flex flex-col gap-[1px]">
-              <li
-                onClick={() => {
-                  setProducts(productData);
-                  setIsOpen(!open);
-                }}
-                className="hover:bg-gray-800 bg-black text-white w-full px-3 py-2"
-              >
-                All Products
-              </li>
-              {Object.keys(categorizedProducts).map((category) => (
-                <li
-                  key={category}
-                  onClick={() => {
-                    setProducts(categorizedProducts[category]);
-                    setIsOpen(!open);
-                  }}
-                  className="hover:bg-gray-800 bg-black text-white w-full px-3 py-2"
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
-          </div>
+                
+        <div
+          onClick={() => setIsOpen(!open)}
+          className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center"
+        >
           <FaFilter
             size={"22px"}
             onClick={() => setIsOpen(!open)}
             className="relative top-1"
           />
         </div>
-
+        
         <div className="xl:grid xl:grid-cols-4 gap-8 flex justify-center flex-wrap px-6">
           {products.map((product, index) => {
             const isOdd = index % 2 !== 0; // Calculate whether the index is odd

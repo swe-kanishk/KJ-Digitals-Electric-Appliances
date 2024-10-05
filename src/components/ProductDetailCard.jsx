@@ -20,7 +20,7 @@ function ProductDetailCard({
       } fixed  top-0 left-0 lg:px-6 backdrop-blur-md bg-black bg-opacity-70 flex items-center justify-center z-30 h-screen w-full`}
     >
       <div className="bg-gradient-to-r overflow-y-scroll from-neutral-400 border border-white to-stone-500 p-1 flex justify-between items-center lg:items-start flex-col h-full md:max-h-fit lg:flex-row rounded-xl w-[100%] max-w-[1080px] mx-auto relative">
-        <div className="border-2 border-gray-100 flex items-center justify-center rounded-xl overflow-hidden min-h-[550px] w-full lg:w-fit relative">
+        <div className="border-2 border-gray-100 lg:w-1/2 w-full flex items-center justify-center rounded-xl overflow-hidden min-h-[550px] relative">
           <img
             src={product.product_img}
             className="max-h-[550px] min-h-[550px] w-auto object-cover"

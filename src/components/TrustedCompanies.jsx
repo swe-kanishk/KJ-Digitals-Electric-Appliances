@@ -81,23 +81,7 @@ const TrustedCompanies = () => {
     },
     
   ];
-  // useGSAP(() => {
-  //   gsap.to(".animated-companies", {
-  //     x: -700,
-  //     opacity: 50,
-  //       scrollTrigger: {
-  //           trigger: '.animated-cards',
-  //           scroller: 'body',
-  //           start: 'top 120%',
-  //           scrub: true
-  //       }
-  //   })
-  // })
   return (
-    // <div
-    //   ref={containerRef}
-    //   className={` w-auto flex gap-8 border-none py-6`}
-    // >
     <div className="flex gap-8 py-2 overflow-x-scroll">
     {trustedComapies.concat(trustedComapies).map((company, index) => (
       <img
@@ -108,7 +92,6 @@ const TrustedCompanies = () => {
       />
     ))}
   </div>
-    // </div>
   );
 };
 

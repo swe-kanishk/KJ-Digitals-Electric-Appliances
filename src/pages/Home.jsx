@@ -17,10 +17,66 @@ import refrigerator from "../../public/Comp 1.mp4";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { productData } from "../data/products.js";
+import { GiWashingMachine } from "react-icons/gi";
+import { CgSmartHomeRefrigerator } from "react-icons/cg";
+import { TbAirConditioning } from "react-icons/tb";
+import { TbMicrowaveFilled } from "react-icons/tb";
+import { GiChimney } from "react-icons/gi";
+import { FaTv } from "react-icons/fa";
+import tableFan from '../../public/home.png'
+import ceilingFan from '../../public/ceiling.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  const [categorizedProducts, setCategorizedProducts] = useState({});
+
+  const setIcon = (category) => {
+    switch (category) {
+      case "washing_machine":
+        return <GiWashingMachine size={'50px'} />;
+
+      case "fridge":
+        return <CgSmartHomeRefrigerator size={'50px'} />;
+
+      case "Ac":
+        return <TbAirConditioning size={'50px'} />;
+
+      case "Microwave":
+        return <TbMicrowaveFilled size={'50px'} />;
+
+      case "Chimney":
+        return <GiChimney size={'50px'} />;
+
+      case "ceilling-fan":
+        return (
+          <img className="h-[50px] opacity-60" src={ceilingFan} alt="ceiling fan" />
+        
+        );
+
+      case "television":
+        return <FaTv size={'50px'} />;
+
+      case "table-fan":
+        return (
+          <img className="h-[50px] opacity-60" src={tableFan} alt="table fan" />
+        );
+    }
+  };
+
+  useEffect(() => {
+    const categories = {};
+    productData.forEach((product) => {
+      const { category } = product;
+      if (!categories[category]) {
+        categories[category] = [];
+      }
+      categories[category].push(product);
+    });
+    setCategorizedProducts(categories);
+  }, []);
+
   return (
     <>
       <marquee
@@ -55,9 +111,10 @@ function Home() {
       <section className="relative flex flex-col lg:flex-row justify-between min-h-[65vh] sm:min-h-[70vh] md:min-h[75vh] lg:min-h-[85vh]">
         <div className="flex xl:flex-wrap xl:justify-center justify-between pt-[6%] pb-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-6 xl:w-1/2">
           <div className="text-center lg:text-start mx-auto px-3 flex flex-col gap-6">
-            <h1 className="md:text-[2rem] text-[1.2rem] sm:text-[1.5rem] font-bold">
-              Smart Living Starts Here
-              <br /> Elevate Your Home with Cutting-Edge Electronics
+            <h1 className="md:text-[2rem] text-center lg:text-start text-[1.2rem] sm:text-[1.5rem] font-semibold">
+              Welcome to KJ Digitals– Where Innovation Meets Trust!
+              <br /> Explore the Latest in Electronics with Unbeatable Quality
+              and Genuine Customer Satisfaction!
             </h1>
             <p className="text-gray-400 mx-auto lg:mx-0 xl:w-auto w-full text-[14px] sm:text-[18px] md:font-medium">
               Transform your lifestyle with KJ Digitals! Explore the latest in
@@ -104,12 +161,6 @@ function Home() {
                   Expert Support Available 24/7.
                 </li>
               </ul>
-              {/* <Link
-                to="/contact"
-                className="absolute bottom-5 right-5 text-white z-20 border-white border-2 rounded-lg bg-black px-4 py-2 hover:bg-purple-700 font-medium"
-              >
-                Contact us!
-              </Link> */}
             </div>
             <div className="relative w-fit lg:hidden flex justify-end">
               <img
@@ -152,39 +203,6 @@ function Home() {
       </section>
 
       <section className="py-4 px-3 flex flex-col gap-3">
-        <h1 className="text-2xl font-medium">Our Top Categories!</h1>
-        <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
-          <Card
-            title={"Summer Appliances"}
-            subtitle={
-              "Stay Cool All Year Round – Powerful ACs for Ultimate Comfort!."
-            }
-            image="https://i.pinimg.com/736x/5b/51/af/5b51af33306d4eb1c2fee0ec58c308d2.jpg"
-          />
-          <Card
-            title={"Kitchen Appliances"}
-            subtitle={
-              "Cook with Precision – Modern Ovens for Perfect Meals Every Time!."
-            }
-            image="https://i.pinimg.com/736x/00/20/c5/0020c563c92f77ed35eb2661bb732ed0.jpg"
-          />
-          <Card
-            title={"Laundry Appliances"}
-            subtitle={
-              "Effortless Laundry Days – Washing Machines that Do the Hard Work for You!"
-            }
-            image="https://i.pinimg.com/736x/f7/dd/4c/f7dd4c81c591889ec5dcde51fb5dc56a.jpg"
-          />
-          <Card
-            title={"Entertainment Appliances"}
-            subtitle={
-              "Experience Entertainment Like Never Before – Stunning TVs for a Cinematic Viewing"
-            }
-            image="https://i.pinimg.com/736x/69/4c/1f/694c1f3e615fb3419496ddf7ec675098.jpg"
-          />
-        </div>
-      </section>
-      <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Home Appliances!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
@@ -212,6 +230,34 @@ function Home() {
             image="https://i.pinimg.com/736x/64/eb/04/64eb0407c26eabbf62e03b6eeffdbfdf.jpg"
           />
         </div>
+      </section>
+      <section className="py-4 px-3 flex bg-[#ffab77] flex-col gap-3">
+        <h1 className="text-2xl font-medium">
+          Explore Products From Each Categories!
+        </h1>
+        <ul className="flex items-center justify-center rounded-lg overflow-x-scroll w-full">
+          {Object.keys(categorizedProducts).map((category) => (
+            <li
+              key={category}
+              onClick={() => {
+                setProducts(categorizedProducts[category]);
+                setIsOpen(!open);
+              }}
+              className="bg-black flex items-center justify-start lg:justify-center min-w-fit text-white w-full px-3 py-4"
+            >
+              <div  className="bg-white hover:scale-110 duration-300 min-w-fit flex-1 cursor-pointer text-gray-500 gap-8 px-3 py-2 flex flex-col items-between justify-center rounded-lg">
+                <span className="flex items-center w-full justify-center font-medium">
+                  {category}
+                </span>
+                <span className="w-full flex items-center justify-center">
+                  {
+                    setIcon(category)
+                  }
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </section>
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top Smart-Watches!</h1>
