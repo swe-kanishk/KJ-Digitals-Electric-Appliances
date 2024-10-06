@@ -158,8 +158,10 @@ function Products() {
                 key={category}
                 onClick={() => {
                   setProducts(categorizedProducts[category]);
+                  setActiveCategory(category)
                 }}
-                className={`hover:bg-gray-800 rounded-lg flex gap-2 items-center hover:text-white text-gray-500 min-w-fit px-3 py-2 ${activeCategory === category ? 'bg-black text white' : 'bg-gray-200 text-black'}`}
+      
+                className={`hover:bg-gray-800 rounded-lg flex gap-2 items-center hover:text-white text-gray-500 min-w-fit px-3 py-2 ${activeCategory === category ? 'bg-black text-white' : 'bg-gray-200 text-black'}`}
               >
                 <div>{setIcon(category)}</div>
                 <span>{category}</span>
