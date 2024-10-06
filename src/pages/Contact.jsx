@@ -47,7 +47,7 @@ function Contact() {
   return (
     <>
       {success ? <Success /> : ""}
-      <div className="flex flex-col">
+      <div className="flex pt-[4rem] flex-col">
         <form
           onSubmit={(e) => onSubmit(e)}
           className="flex border border-black"

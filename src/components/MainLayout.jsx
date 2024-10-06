@@ -13,7 +13,7 @@ function MainLayout() {
       <div className="bg-black">
         <div className="flex flex-col bg-white w-full overflow-hidden max-w-[1600px] border border-black outline outline-white outline-offset-4 mx-auto relative">
           <Navbar />
-          <div className="max-w-[1600px] relative overflow-hidden">
+          <div>
             <Outlet />
           </div>
           <Footer />

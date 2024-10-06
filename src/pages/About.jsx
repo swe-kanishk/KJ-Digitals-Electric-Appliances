@@ -4,7 +4,7 @@ import TrustedCompanies from "../components/TrustedCompanies";
 
 function About() {
   return (
-    <div className="min-h-[55vh] w-full flex flex-col items-start justify-center">
+    <div className="min-h-[55vh] w-full pt-[4rem] flex flex-col items-start justify-center">
       {/* zxnZndxlclzMvcxzmvxzb */}
       <section className="px-3 py-2 text-center flex gap-8 items-center justify-center flex-col w-[100%]">
         <div className={`bg-gray-300 lg:w-[70%] rounded-lg px-2 py-3`}>

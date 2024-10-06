@@ -146,7 +146,7 @@ function Products() {
   return (
     <>
       {success && <Success />}
-      <div className={`w-full bg-white flex flex-col gap-20 pb-6 items-center justify-center relative ${open ? 'pt-[5rem]' : 'pt-[5vh]'}`}>
+      <div className={`w-full bg-white flex flex-col gap-20 pb-6 items-center justify-center relative ${open ? 'pt-[10rem]' : 'pt-[10vh]'}`}>
         <div
           className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md max-w-[1599px] shadow-gray-500 w-full text-center  hover:text-white overflow-y-scroll ${
             open ? "flex fixed top-[65px] pt-3 z-20" : "hidden"
