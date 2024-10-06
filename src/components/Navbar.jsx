@@ -94,7 +94,7 @@ function Navbar() {
           open ? "translate-x-0 ease-out" : "-translate-x-full ease-in"
         } flex flex-col justify-start my-auto pt-[75px] font-medium border-r border-gray-400 inset-0 z-20 px-3 py-3 w-fit left-0 bottom-0 fixed`}
       >
-        <div className="flex flex-col items-start pt-[25vh] rounded-xl justify-start gap-4 h-screen my-4">
+        <div className="flex flex-col items-start pt-[30vh] rounded-xl justify-start gap-4 h-screen my-4">
           <NavLink
             onClick={() => setIsOpen(!open)}
             className={({ isActive }) =>
