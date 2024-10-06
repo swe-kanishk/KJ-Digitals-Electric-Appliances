@@ -35,6 +35,7 @@ function Products() {
   const [email, setEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [error, setError] = useState("");
+  const [activeCategory, setActiveCategory] = useState('')
 
   const setIcon = (category) => {
     switch (category) {
@@ -99,6 +100,7 @@ function Products() {
       return newItem.toLowerCase().includes(searchItem.toLowerCase());
     });
     setProducts(allSearchProducts);
+    setActiveCategory(allSearchProducts[0].category)
   };
 
   function onSubmit(e) {
@@ -144,10 +146,10 @@ function Products() {
   return (
     <>
       {success && <Success />}
-      <div className={`w-full bg-white flex flex-col gap-20 pb-6 items-center justify-center relative ${open ? '' : 'pt-[5vh]'}`}>
+      <div className={`w-full bg-white flex flex-col gap-20 pb-6 items-center justify-center relative ${open ? 'pt-[5rem]' : 'pt-[5vh]'}`}>
         <div
-          className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md shadow-gray-500 w-full text-center  hover:text-white overflow-y-scroll ${
-            open ? "flex" : "hidden"
+          className={`bg-white py-1 px-3 text-black overflow-x-hidden shadow-md max-w-[1599px] shadow-gray-500 w-full text-center  hover:text-white overflow-y-scroll ${
+            open ? "flex fixed top-[65px] pt-3 z-20" : "hidden"
           } rounded-l-lg font-medium`}
         >
           <ul className="flex w-full items-center justify-evenly pb-2 overflow-x-scroll gap-4">
@@ -156,9 +158,8 @@ function Products() {
                 key={category}
                 onClick={() => {
                   setProducts(categorizedProducts[category]);
-                  setIsOpen(!open);
                 }}
-                className="hover:bg-gray-800 bg-gray-200 rounded-lg flex gap-2 items-center hover:text-white text-gray-500 min-w-fit px-3 py-2"
+                className={`hover:bg-gray-800 rounded-lg flex gap-2 items-center hover:text-white text-gray-500 min-w-fit px-3 py-2 ${activeCategory === category ? 'bg-black text white' : 'bg-gray-200 text-black'}`}
               >
                 <div>{setIcon(category)}</div>
                 <span>{category}</span>
