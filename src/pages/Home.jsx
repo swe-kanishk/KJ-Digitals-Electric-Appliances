@@ -84,6 +84,7 @@ function Home() {
 
   return (
     <>
+      <div className="bg-black">
       <marquee
         behavior="scroll"
         direction="left"
@@ -112,7 +113,10 @@ function Home() {
           </div>
         </div>
       </marquee>
-
+      <section>
+        <h1 className="text-center text-3xl bg-black py-1 px-3 flex flex-col  bungee-spice-regular">KJ-Digitals <span className="text-white text-sm">डिजिटल दुनिया अनबॉक्स अपने सपनों की</span></h1>
+      </section>
+      </div>
       <section className="relative flex flex-col lg:flex-row justify-between min-h-[65vh] sm:min-h-[70vh] md:min-h[75vh] lg:min-h-[85vh]">
         <div className="flex xl:flex-wrap xl:justify-center justify-between pt-[6%] pb-[6%] lg:pb-0 flex-1 items-start lg:pl-6 flex-col w-full gap-6 xl:w-1/2">
           <div className="text-center lg:text-start mx-auto px-3 flex flex-col gap-6">
@@ -253,7 +257,7 @@ function Home() {
             >
               <div  className="bg-white hover:scale-105 duration-300 min-w-[200px] flex-1 w-full cursor-pointer text-gray-500 gap-8 px-3 py-2 flex flex-col items-between justify-center rounded-lg">
                 <span className="flex items-center w-full justify-center text-lg font-medium">
-                  {category}
+                  {category.toUpperCase()}
                 </span>
                 <span className="w-full flex items-center justify-center">
                   {
@@ -270,27 +274,27 @@ function Home() {
         <h1 className="text-2xl font-medium">Our Top Smart-Watches!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
-            title={"Daikin Ac"}
-            subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
+            title={"Apple Watch Series 9"}
+            subtitle={"The Ultimate Health and Fitness Companion with Advanced Tracking and Seamless Connectivity"}
             image="https://i.pinimg.com/564x/6e/b7/3e/6eb73ed0ec31e26dd728c24fe5083c71.jpg"
           />
           <Card
-            title={"Lazer Grinder"}
+            title={"Samsung Galaxy Watch 6"}
             subtitle={
-              "Effortless Blending and Mixing with Our Top-Quality Mixers."
+              "Stay Ahead with Cutting-Edge Fitness Insights and Timeless Design"
             }
             image="https://i.pinimg.com/564x/4e/a8/50/4ea8507ae664e6201ef80df4351f4b76.jpg"
           />
           <Card
-            title={"Washing Machine"}
+            title={"Fitbit Sense 2"}
             subtitle={
-              "Revolutionize Laundry Day with Our Efficient Washing Machines."
+              "Empower Your Wellness Journey with Stress Management and 24/7 Health Tracking"
             }
             image="https://i.pinimg.com/736x/3b/31/7a/3b317af8a879bdd90abf12bff20f071a.jpg"
           />
           <Card
-            title={"JBL Speaker"}
-            subtitle={"Immerse Yourself in Sound with Our Premium Speakers."}
+            title={"Garmin Forerunner 965"}
+            subtitle={"Train Smarter with Precision GPS and Unmatched Athletic Performance Metrics"}
             image="https://i.pinimg.com/736x/c8/14/c6/c814c67deccd9b6f4203ebc7dc5a9d57.jpg"
           />
         </div>
@@ -299,28 +303,28 @@ function Home() {
         <h1 className="text-2xl font-medium">Our Top SmartPhones!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
           <Card
-            title={"Daikin Ac"}
-            subtitle={"Stay Cool with Our Range of Advanced Air Conditioners."}
+            title={"iPhone 14"}
+            subtitle={"Experience the Next Level of Sophistication with Lightning-Fast Performance and Iconic Design"}
             image="https://i.pinimg.com/564x/59/fc/7b/59fc7b9945ee7d8f8b75d5977ccb97ad.jpg"
           />
           <Card
-            title={"Washing Machine"}
+            title={"Huawei P60 Pro"}
             subtitle={
-              "Revolutionize Laundry Day with Our Efficient Washing Machines."
+              "Redefine Photography and Power with Cutting-Edge AI and Superior Design"
             }
             image="https://i.pinimg.com/564x/36/05/90/3605903215abeed730cac12cc7385b22.jpg"
           />
           <Card
-            title={"Lazer Grinder"}
+            title={"Samsung Galaxy S24 Ultra"}
             subtitle={
-              "Effortless Blending and Mixing with Our Top-Quality Mixers."
+              "Unleash the Future of Mobile Innovation with Stunning Clarity and Unmatched Performance"
             }
             image="https://i.pinimg.com/736x/fc/4d/64/fc4d644c639a30a46aad2d820b72e5b2.jpg"
           />
 
           <Card
-            title={"JBL Speaker"}
-            subtitle={"Immerse Yourself in Sound with Our Premium Speakers."}
+            title={"Vivo V23 5G"}
+            subtitle={"Elevate Your Selfie Game with Ultra-Smooth 5G and Stunning Dual Front Cameras"}
             image="https://i.pinimg.com/564x/eb/5f/9f/eb5f9f5e41040a7f32431a642ae361ce.jpg"
           />
         </div>
