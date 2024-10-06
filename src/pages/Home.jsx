@@ -114,7 +114,7 @@ function Home() {
         </div>
       </marquee>
       <section>
-        <h1 className="text-center text-3xl bg-black py-1 px-3 flex flex-col  bungee-spice-regular">KJ-Digitals <span className="text-white text-sm">डिजिटल दुनिया अनबॉक्स अपने सपनों की</span></h1>
+        <h1 className="text-center text-4xl bg-black py-1 px-3 flex flex-col bungee-spice-regular">KJ-Digitals <span className="text-white text-[14px]">डिजिटल दुनिया अनबॉक्स अपने सपनों की</span></h1>
       </section>
       </div>
       <section className="relative flex flex-col lg:flex-row justify-between min-h-[65vh] sm:min-h-[70vh] md:min-h[75vh] lg:min-h-[85vh]">

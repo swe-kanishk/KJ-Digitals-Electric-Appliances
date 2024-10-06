@@ -88,11 +88,11 @@ function Navbar() {
           )}
         </div>
       </nav>
-      <div className="h-[75px]"></div>
+      {/* <div className="h-[75px]"></div> */}
       <div
-        className={`h-[100vh] bg-white transition-transform overflow-hidden duration-500 ${
+        className={`h-[120vh] bg-white pt-[160px] transition-transform overflow-hidden duration-500 ${
           open ? "translate-x-0 ease-out" : "-translate-x-full ease-in"
-        } flex flex-col justify-start my-auto pt-[75px] font-medium border-r border-gray-400 inset-0 z-20 px-3 py-3 w-fit left-0 bottom-0 fixed`}
+        } flex flex-col justify-start my-auto pt-[75px] font-medium border-r border-gray-400 inset-0 z-20 px-3 py-3 w-fit left-0 top-0 fixed`}
       >
         <div className="flex flex-col items-start rounded-xl justify-between h-1/3 my-4">
           <NavLink
