@@ -210,7 +210,7 @@ function Products() {
 
         <div
           onClick={() => setIsOpen(!open)}
-          className="bg-[#ff6201] z-50 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center"
+          className="bg-[#ff6201] z-30 h-12 w-12 fixed bottom-20 shadow-md shadow-black cursor-pointer right-6 rounded-full text-white flex items-center justify-center"
         >
           <FaFilter
             size={"22px"}
