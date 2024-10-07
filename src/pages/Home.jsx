@@ -1,5 +1,6 @@
 import "../App.css";
 import Card from "../components/Card";
+import Card2 from "../components/Card2";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoMdCall } from "react-icons/io";
@@ -27,7 +28,6 @@ import { FaTv } from "react-icons/fa";
 import tableFan from '../../public/home.png'
 import ceilingFan from '../../public/ceiling.png'
 import { CategoriesContext } from "../components/MainLayout.jsx";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
@@ -85,6 +85,7 @@ function Home() {
   return (
     <>
       <div className="bg-black pt-[4rem]">
+
       <marquee
         behavior="scroll"
         direction="left"
@@ -302,19 +303,19 @@ function Home() {
       <section className="py-4 px-3 flex flex-col gap-3">
         <h1 className="text-2xl font-medium">Our Top SmartPhones!</h1>
         <div className="bg-gray-300 flex w-full overflow-x-scroll animated-cards">
-          <Card
+          <Card2
             title={"iPhone 14"}
             subtitle={"Experience the Next Level of Sophistication with Lightning-Fast Performance and Iconic Design"}
             image="https://i.pinimg.com/564x/59/fc/7b/59fc7b9945ee7d8f8b75d5977ccb97ad.jpg"
           />
-          <Card
+          <Card2
             title={"Huawei P60 Pro"}
             subtitle={
               "Redefine Photography and Power with Cutting-Edge AI and Superior Design"
             }
             image="https://i.pinimg.com/564x/36/05/90/3605903215abeed730cac12cc7385b22.jpg"
           />
-          <Card
+          <Card2
             title={"Samsung Galaxy S24 Ultra"}
             subtitle={
               "Unleash the Future of Mobile Innovation with Stunning Clarity and Unmatched Performance"
@@ -322,7 +323,7 @@ function Home() {
             image="https://i.pinimg.com/736x/fc/4d/64/fc4d644c639a30a46aad2d820b72e5b2.jpg"
           />
 
-          <Card
+          <Card2
             title={"Vivo V23 5G"}
             subtitle={"Elevate Your Selfie Game with Ultra-Smooth 5G and Stunning Dual Front Cameras"}
             image="https://i.pinimg.com/564x/eb/5f/9f/eb5f9f5e41040a7f32431a642ae361ce.jpg"
